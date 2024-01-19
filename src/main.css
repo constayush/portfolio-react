@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  background-color: #19181B;
+}
+
+.mainWrap {
+  background-color: #19181B;
+}
+
+
+.navLink,
+.ayush {
+
+  color: #FFF3DD;
+
+
+}
+
+
+.rbutton {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+  color: rgb(255, 190, 71);
+  transition: all .3s ease;
+  z-index: 1;
+}
+
+.rbutton:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.rbutton:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: rgb(255, 190, 71);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.rbutton:hover {
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+
+.rbutton:hover:before {
+  top: -35%;
+  background-color: rgb(255, 190, 71);
+  transform: translateX(-50%) scaleY(1) scaleX(0.8);
+}
+
+.rbutton:hover:after {
+  top: -45%;
+  background-color: #ffbe47;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+.greeting {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  color: rgb(255, 190, 71);
+  margin: 0;
+
+}
+
+.nameH1 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-weight: 600;
+  color: #FFF3DD;
+
+}
+
+.subH1 {
+
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-weight: 600;
+  color: #938b7b;
+}
+
+
+.aboutPara {
+
+
+
+
+  color: #938b7b;
+}
+
+.resumePara {
+  color: #ffbe47;
+  font-family: 'Montserrat', sans-serif;
+  transition: all .3s ease;
+}
+
+.resumePara:hover {
+  cursor: pointer;
+
+  margin-left: 1.5rem;
+
+}
+
+.socailLi {
+  border: #19181B solid 1px;
+
+  color: #ffbe47;
+}
+
+.ayush{
+  font-family: 'Rubik Maze', system-ui;
+
+}
+.navLink {
+
+
+
+  background-image: linear-gradient(to right,
+      #ffbe47,
+      #ffbe47 50%,
+      #FFF3DD 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+
+}
+
+.navLink:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+
+.navLink:hover {
+  background-position: 0;
+  transform: scale(1.1);
+}
+
+/* font-family: 'Space Grotesk', sans-serif; */
+
+.socailLi {
+
+  transition: all .3s ease;
+}
+
+
+
+
+
+
+.linkedin:hover {
+  content: url('../public/linkedinH.svg');
+
+}
+
+.mail:hover {
+  content: url('../public/mailH.svg');
+
+}
+
+.instagram:hover {
+  content: url('../public/instagramH.svg');
+
+}
+
+.github:hover {
+  content: url('../public/githubH.svg');
+
+}
+
+.socailLi:hover {
+  cursor: pointer;
+  mix-blend-mode: multiply;
+
+
+  transform: scale(1.125);
+}
+
+
+
+.ball {
+  background: #fff;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.hr{
+  border:1px solid #ffe5b6c9;
+}
