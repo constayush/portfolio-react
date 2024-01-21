@@ -17,8 +17,13 @@ body {
 .ayush {
 
   color: #FFF3DD;
+  transition: all .3s ease;
 
+}
 
+.ayush:hover {
+
+  letter-spacing: 1rem;
 }
 
 
@@ -137,10 +142,11 @@ body {
   color: #ffbe47;
 }
 
-.ayush{
+.ayush {
   font-family: 'Rubik Maze', system-ui;
 
 }
+
 .navLink {
 
 
@@ -216,18 +222,109 @@ body {
 
 
 
-.ball {
-  background: #fff;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
+
+.hr {
+  border: 1px solid #ffe5b6c9;
 }
 
-.hr{
-  border:1px solid #ffe5b6c9;
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.projectsH1 {
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 600;
+  color: #FFF3DD;
+
+}
+
+.smallcomp {
+
+
+  border: #ffbe47 1px solid;
+}
+
+.longcomp {
+
+  border: #ffbe47 1px solid;
+}
+
+.projectPara {
+  color: #938b7b;
+
+  font-size: 1rem;
+}
+
+
+.minnorProjects {
+  font-size: 1rem;
+
+}
+
+.minnorH1 {
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 300;
+  color: #FFF3DD;
+}
+
+.CompMainContent {
+  background-color: #ffbf4709;
+  opacity: 0;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.CompMainContent:hover {
+
+  opacity: 1;
+}
+
+.compH1 {
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 400;
+
+  color: #FFF3DD;
+
+}
+
+.compP {
+  color: #938b7b;
+}
+
+
+.minnorprojectsLinks {
+
+  color: #ffbf47d1;
+
+}
+
+
+.orange {
+
+  color: #FFF3DD;
+}
+
+.conH1 {
+  color: #FFF3DD;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.conPara {
+  color: #a09786;
+}
+
+.conLinks {
+  color: #ffbf47d1;
+  transition: all .27s ease;
+}
+
+.conLinks:hover {
+  margin-left: 1rem;
+}
+
+.contact {
+  overflow-x: hidden;
 }

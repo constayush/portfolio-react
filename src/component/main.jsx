@@ -1,11 +1,9 @@
-
 import github from '../../public/github.svg'
-
 import linkedin from '../../public/linked-in.svg'
-
 import insta from '../../public/instagram.svg'
-
 import mail from '../../public/mail.svg'
+
+
 export default () => {
 
     return (<div className="flex flex-col lg:flex-row md:flex-row">
@@ -16,7 +14,6 @@ export default () => {
                 <p className=" text-left greeting mb-[.8rem]">Hi, my name is</p>
                 <h1 className="text-left nameH1 text-[2rem] md:text-[4rem] lg:text-[4rem]">Ayush Srivastava</h1>
                 <h1 className="text-left subH1  text-[2rem] md:text-[4rem] lg:text-[4rem]">I build things for the web.</h1>
-
 
                 <div className="aboutParas  w-[80%] md:w-[50%] lg:w-[50%] mt-4">
                     <p className="aboutPara mb-[.75rem]">a web developer from Meerut, India. I'm passionate about crafting user-friendly and visually stunning websites.</p>
@@ -37,10 +34,6 @@ export default () => {
             </div>
         </div>
 
-
-
-
-
         <div className="social z-40 w-fit md:w-[10vw] lg:w-[10vw] h-fit md:h-[80vh] lg:h-[80vh] flex flex-row md:flex-col md:pt-[10vmax] lg:flex-col lg:pt-[10vmax] justify-center items-center">
 
             <ul className="mr-1 md:mr-[10rem] lg:mr-[10rem] flex flex-row md:flex-col lg:flex-col justify-center items-center">
@@ -51,8 +44,6 @@ export default () => {
             </ul>
 
         </div>
-
-
 
     </div>)
 }
