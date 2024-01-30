@@ -9,7 +9,7 @@ export default () => {
        
             <nav className="fixed  z-[999] navbar flex justify-between w-[100vw] h-[5vmax] p-[4vmax] lg:h-[5vmax] bg-[#19181B] items-center">
                 <a href="#"><div className="logo">
-                    <h1 className="ayush text-2xl lg:text-4xl">As.</h1>
+                    <h1 className="ayush text-2xl lg:text-4xl"><a href="/">As.</a></h1>
 
                     
                    </div></a>
