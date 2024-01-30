@@ -645,20 +645,16 @@ video {
   height: 20vmax;
 }
 
+.h-\[45vh\] {
+  height: 45vh;
+}
+
 .h-\[55px\] {
   height: 55px;
 }
 
 .h-\[5vmax\] {
   height: 5vmax;
-}
-
-.h-\[60vh\] {
-  height: 60vh;
-}
-
-.h-\[70vh\] {
-  height: 70vh;
 }
 
 .h-\[80vh\] {
@@ -682,16 +678,16 @@ video {
   height: 100%;
 }
 
-.h-\[45vh\] {
-  height: 45vh;
+.h-\[30px\] {
+  height: 30px;
 }
 
 .w-\[100vw\] {
   width: 100vw;
 }
 
-.w-\[28vw\] {
-  width: 28vw;
+.w-\[36vmax\] {
+  width: 36vmax;
 }
 
 .w-\[45px\] {
@@ -702,16 +698,16 @@ video {
   width: 55px;
 }
 
-.w-\[57vmax\] {
-  width: 57vmax;
-}
-
 .w-\[70\%\] {
   width: 70%;
 }
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[80vw\] {
+  width: 80vw;
 }
 
 .w-\[90vw\] {
@@ -731,32 +727,8 @@ video {
   width: 100%;
 }
 
-.w-\[20vmax\] {
-  width: 20vmax;
-}
-
-.w-\[30vmax\] {
-  width: 30vmax;
-}
-
-.w-\[36vmax\] {
-  width: 36vmax;
-}
-
-.w-\[40vw\] {
-  width: 40vw;
-}
-
-.w-\[60vw\] {
-  width: 60vw;
-}
-
-.w-\[70vw\] {
-  width: 70vw;
-}
-
-.w-\[80vw\] {
-  width: 80vw;
+.w-\[30px\] {
+  width: 30px;
 }
 
 .flex-row {
@@ -785,10 +757,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-\[1rem\] {
-  gap: 1rem;
 }
 
 .rounded-lg {
@@ -1129,40 +1097,56 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:ml-\[1rem\] {
+    margin-left: 1rem;
+  }
+
   .md\:mr-\[10rem\] {
     margin-right: 10rem;
-  }
-
-  .md\:h-\[80vh\] {
-    height: 80vh;
-  }
-
-  .md\:h-\[70vh\] {
-    height: 70vh;
   }
 
   .md\:h-\[60vh\] {
     height: 60vh;
   }
 
+  .md\:h-\[70vh\] {
+    height: 70vh;
+  }
+
+  .md\:h-\[80vh\] {
+    height: 80vh;
+  }
+
+  .md\:h-\[55px\] {
+    height: 55px;
+  }
+
   .md\:w-\[10vw\] {
     width: 10vw;
+  }
+
+  .md\:w-\[28vw\] {
+    width: 28vw;
   }
 
   .md\:w-\[50\%\] {
     width: 50%;
   }
 
-  .md\:w-\[60\%\] {
-    width: 60%;
-  }
-
   .md\:w-\[57vmax\] {
     width: 57vmax;
   }
 
-  .md\:w-\[28vw\] {
-    width: 28vw;
+  .md\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .md\:w-\[45px\] {
+    width: 45px;
+  }
+
+  .md\:w-\[55px\] {
+    width: 55px;
   }
 
   .md\:flex-row {
@@ -1171,6 +1155,14 @@ body {
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:justify-normal {
+    justify-content: normal;
   }
 
   .md\:px-\[12vmax\] {

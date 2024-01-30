@@ -6,7 +6,7 @@ import mail from '../../public/mail.svg'
 
 export default () => {
 
-    return (<div className="flex flex-col lg:flex-row md:flex-row">
+    return (<div className="flex flex-col lg:flex-row md:flex-row  justify-center items-center md:items-start md:justify-normal">
 
         <div className="mainWrap w-[90vw] h-[fit] z-0 pt-[12vmax] md:pt-[10vmax] lg:pt-[10vmax] flex justify-center items-center pb-2 px-[2.75vmax] md:px-[12vmax] lg:px-[12vmax] ">
             <div className="main  w-full h-full   p-0 mb-[1rem]">
@@ -37,10 +37,10 @@ export default () => {
         <div className="social z-40 w-fit md:w-[10vw] lg:w-[10vw] h-fit md:h-[80vh] lg:h-[80vh] flex flex-row md:flex-col md:pt-[10vmax] lg:flex-col lg:pt-[10vmax] justify-center items-center">
 
             <ul className="mr-1 md:mr-[10rem] lg:mr-[10rem] flex flex-row md:flex-col lg:flex-col justify-center items-center">
-                <a target="_blank" href="https://github.com/constayush" className="ml-[1rem] github socailLi w-[55px] h-[55px] mb-[1.25rem] flex justify-center items-center">     <img src={github}></img>   </a>
-                <a target="_blank" href="https://www.linkedin.com/in/constayush/" className="ml-[1rem] linkedin socailLi w-[55px] h-[55px] mb-[1.25rem] flex justify-center items-center">   <img src={linkedin}></img> </a>
-                <a target="_blank" href="https://www.instagram.com/maihoonayush/" className="ml-[1rem] instagram socailLi w-[55px] h-[55px] mb-[1.25rem] flex justify-center items-center">  <img src={insta}></img>    </a>
-                <a className="ml-[1rem] mail socailLi w-[45px] h-[55px] mb-[1.25rem] flex justify-center items-center">      <img src={mail}></img>      </a>
+                <a target="_blank" href="https://github.com/constayush" className="md:ml-[1rem] github socailLi w-[30px] h-[30px] md:w-[55px] md:h-[55px] mb-[1.25rem] flex justify-center items-center">     <img src={github}></img>   </a>
+                <a target="_blank" href="https://www.linkedin.com/in/constayush/" className="ml-[1rem] linkedin socailLi w-[30px] h-[30px] md:w-[55px] md:h-[55px] mb-[1.25rem] flex justify-center items-center">   <img src={linkedin}></img> </a>
+                <a target="_blank" href="https://www.instagram.com/maihoonayush/" className="ml-[1rem] instagram socailLi w-[30px] h-[30px] md:w-[55px] md:h-[55px] mb-[1.25rem] flex justify-center items-center">  <img src={insta}></img>    </a>
+                <a className="ml-[1rem] mail socailLi w-[30px] h-[30px] md:w-[45px] md:h-[55px] mb-[1.25rem] flex justify-center items-center">      <img src={mail}></img>      </a>
             </ul>
 
         </div>
