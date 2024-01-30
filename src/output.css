@@ -645,12 +645,12 @@ video {
   height: 20vmax;
 }
 
-.h-\[45vh\] {
-  height: 45vh;
+.h-\[30px\] {
+  height: 30px;
 }
 
-.h-\[55px\] {
-  height: 55px;
+.h-\[45vh\] {
+  height: 45vh;
 }
 
 .h-\[5vmax\] {
@@ -678,24 +678,16 @@ video {
   height: 100%;
 }
 
-.h-\[30px\] {
-  height: 30px;
-}
-
 .w-\[100vw\] {
   width: 100vw;
 }
 
+.w-\[30px\] {
+  width: 30px;
+}
+
 .w-\[36vmax\] {
   width: 36vmax;
-}
-
-.w-\[45px\] {
-  width: 45px;
-}
-
-.w-\[55px\] {
-  width: 55px;
 }
 
 .w-\[70\%\] {
@@ -725,10 +717,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[30px\] {
-  width: 30px;
 }
 
 .flex-row {
@@ -987,6 +975,14 @@ body {
   transition: all .3s ease;
 }
 
+::-webkit-scrollbar {
+  background: #130bfb00;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #bbad95;
+}
+
 .linkedin:hover {
   content: url('../public/linkedinH.svg');
 }
@@ -1105,6 +1101,10 @@ body {
     margin-right: 10rem;
   }
 
+  .md\:h-\[55px\] {
+    height: 55px;
+  }
+
   .md\:h-\[60vh\] {
     height: 60vh;
   }
@@ -1117,10 +1117,6 @@ body {
     height: 80vh;
   }
 
-  .md\:h-\[55px\] {
-    height: 55px;
-  }
-
   .md\:w-\[10vw\] {
     width: 10vw;
   }
@@ -1129,8 +1125,16 @@ body {
     width: 28vw;
   }
 
+  .md\:w-\[45px\] {
+    width: 45px;
+  }
+
   .md\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .md\:w-\[55px\] {
+    width: 55px;
   }
 
   .md\:w-\[57vmax\] {
@@ -1139,14 +1143,6 @@ body {
 
   .md\:w-\[60\%\] {
     width: 60%;
-  }
-
-  .md\:w-\[45px\] {
-    width: 45px;
-  }
-
-  .md\:w-\[55px\] {
-    width: 55px;
   }
 
   .md\:flex-row {
