@@ -645,12 +645,12 @@ video {
   height: 20vmax;
 }
 
-.h-\[45vh\] {
-  height: 45vh;
+.h-\[30px\] {
+  height: 30px;
 }
 
-.h-\[55px\] {
-  height: 55px;
+.h-\[45vh\] {
+  height: 45vh;
 }
 
 .h-\[5vmax\] {
@@ -678,24 +678,20 @@ video {
   height: 100%;
 }
 
-.h-\[30px\] {
-  height: 30px;
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 .w-\[100vw\] {
   width: 100vw;
 }
 
+.w-\[30px\] {
+  width: 30px;
+}
+
 .w-\[36vmax\] {
   width: 36vmax;
-}
-
-.w-\[45px\] {
-  width: 45px;
-}
-
-.w-\[55px\] {
-  width: 55px;
 }
 
 .w-\[70\%\] {
@@ -725,10 +721,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[30px\] {
-  width: 30px;
 }
 
 .flex-row {
@@ -768,12 +760,25 @@ video {
   background-color: rgb(25 24 27 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-0 {
   padding: 0px;
 }
 
 .p-\[4vmax\] {
   padding: 4vmax;
+}
+
+.p-\[5vmax\] {
+  padding: 5vmax;
+}
+
+.p-\[10vmax\] {
+  padding: 10vmax;
 }
 
 .px-\[2\.75vmax\] {
@@ -822,9 +827,28 @@ video {
   font-size: 3rem;
 }
 
+.text-\[4rem\] {
+  font-size: 4rem;
+}
+
 .text-\[\#ffbe47\] {
   --tw-text-opacity: 1;
   color: rgb(255 190 71 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-\[black\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 html,
@@ -953,31 +977,7 @@ body {
   font-family: 'Rubik Maze', system-ui;
 }
 
-.navLink {
-  background-image: linear-gradient(to right,
-      #ffbe47,
-      #ffbe47 50%,
-      #FFF3DD 50%);
-  background-size: 200% 100%;
-  background-position: -100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.navLink:before {
-  content: '';
-  background: #54b3d6;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-}
-
 .navLink:hover {
-  background-position: 0;
   transform: scale(1.1);
 }
 
@@ -1096,6 +1096,10 @@ body {
   overflow-x: hidden;
 }
 
+.active{
+  color: #ffbe47;
+}
+
 @media (min-width: 768px) {
   .md\:ml-\[1rem\] {
     margin-left: 1rem;
@@ -1103,6 +1107,10 @@ body {
 
   .md\:mr-\[10rem\] {
     margin-right: 10rem;
+  }
+
+  .md\:h-\[55px\] {
+    height: 55px;
   }
 
   .md\:h-\[60vh\] {
@@ -1117,10 +1125,6 @@ body {
     height: 80vh;
   }
 
-  .md\:h-\[55px\] {
-    height: 55px;
-  }
-
   .md\:w-\[10vw\] {
     width: 10vw;
   }
@@ -1129,8 +1133,16 @@ body {
     width: 28vw;
   }
 
+  .md\:w-\[45px\] {
+    width: 45px;
+  }
+
   .md\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .md\:w-\[55px\] {
+    width: 55px;
   }
 
   .md\:w-\[57vmax\] {
@@ -1139,14 +1151,6 @@ body {
 
   .md\:w-\[60\%\] {
     width: 60%;
-  }
-
-  .md\:w-\[45px\] {
-    width: 45px;
-  }
-
-  .md\:w-\[55px\] {
-    width: 55px;
   }
 
   .md\:flex-row {

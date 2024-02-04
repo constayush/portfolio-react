@@ -147,36 +147,9 @@ body {
 
 }
 
-.navLink {
-
-
-
-  background-image: linear-gradient(to right,
-      #ffbe47,
-      #ffbe47 50%,
-      #FFF3DD 50%);
-  background-size: 200% 100%;
-  background-position: -100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-
-
-}
-
-.navLink:before {
-  content: '';
-  background: #54b3d6;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-}
 
 .navLink:hover {
-  background-position: 0;
+  
   transform: scale(1.1);
 }
 
@@ -327,4 +300,11 @@ body {
 
 .contact {
   overflow-x: hidden;
+}
+
+
+
+.active{
+  color: #ffbe47;
+  
 }
