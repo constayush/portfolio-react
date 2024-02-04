@@ -162,6 +162,17 @@ body {
 
 
 
+::-webkit-scrollbar {
+
+  background: #130bfb00;
+}
+
+::-webkit-scrollbar-thumb{
+
+  background: #bbad95;
+}
+
+
 
 
 

@@ -641,6 +641,10 @@ video {
   display: flex;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[20vmax\] {
   height: 20vmax;
 }
@@ -676,10 +680,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[100vh\] {
-  height: 100vh;
 }
 
 .w-\[100vw\] {
@@ -760,25 +760,16 @@ video {
   background-color: rgb(25 24 27 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .p-0 {
   padding: 0px;
 }
 
-.p-\[4vmax\] {
-  padding: 4vmax;
-}
-
-.p-\[5vmax\] {
-  padding: 5vmax;
-}
-
 .p-\[10vmax\] {
   padding: 10vmax;
+}
+
+.p-\[4vmax\] {
+  padding: 4vmax;
 }
 
 .px-\[2\.75vmax\] {
@@ -834,21 +825,6 @@ video {
 .text-\[\#ffbe47\] {
   --tw-text-opacity: 1;
   color: rgb(255 190 71 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-\[black\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 html,
@@ -985,6 +961,14 @@ body {
 
 .socailLi {
   transition: all .3s ease;
+}
+
+::-webkit-scrollbar {
+  background: #130bfb00;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #bbad95;
 }
 
 .linkedin:hover {
