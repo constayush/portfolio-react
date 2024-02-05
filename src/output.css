@@ -710,6 +710,10 @@ video {
   width: 90vw;
 }
 
+.w-\[95vw\] {
+  width: 95vw;
+}
+
 .w-\[98vw\] {
   width: 98vw;
 }
@@ -768,6 +772,10 @@ video {
   padding: 10vmax;
 }
 
+.p-\[2rem\] {
+  padding: 2rem;
+}
+
 .p-\[4vmax\] {
   padding: 4vmax;
 }
@@ -779,6 +787,10 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pt-\[10vmax\] {
+  padding-top: 10vmax;
 }
 
 .pt-\[12vmax\] {
@@ -827,10 +839,19 @@ video {
   color: rgb(255 190 71 / var(--tw-text-opacity));
 }
 
+.text-\[rgb\(255\2c 190\2c 71\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 190 71 / var(--tw-text-opacity));
+}
+
 html,
 body {
   margin: 0;
   background-color: #19181B;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 
 .mainWrap {
@@ -1084,6 +1105,27 @@ body {
   color: #ffbe47;
 }
 
+.contact{
+  scroll-snap-type: y mandatory;
+}
+
+.conChild{
+  scroll-snap-align: start;
+  position: sticky ;
+  top:0;
+}
+
+.conElems{
+  scroll-snap-align:start;
+  background-color: #19181B;
+  position: sticky ;
+  top:0;
+}
+
+.conLinksSec{
+  height: calc(100vh - 5vmax  );
+}
+
 @media (min-width: 768px) {
   .md\:ml-\[1rem\] {
     margin-left: 1rem;
@@ -1135,6 +1177,10 @@ body {
 
   .md\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .md\:w-\[70vw\] {
+    width: 70vw;
   }
 
   .md\:flex-row {

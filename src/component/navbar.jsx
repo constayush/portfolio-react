@@ -18,7 +18,7 @@ export default () => {
 
                 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-                <div className="navLinks">
+                <div className=" navLinks">
 
                     <ul className="flex justify-center items-center">
 
