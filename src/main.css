@@ -7,9 +7,9 @@ body {
   margin: 0;
   background-color: #19181B;
   scroll-behavior: smooth;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+  /* scroll-snap-points-y: repeat(100vh); */
+  /* scroll-snap-type: y mandatory; */
 }
 
 .mainWrap {
@@ -341,12 +341,15 @@ body {
 
 
 .conElems{ 
-   scroll-snap-align:start;
+   scroll-snap-align:end;
    background-color: #19181B;
-  position: sticky ;
-  top:0;
-}
+   
+   top:0;
 
+}
+.e{
+ 
+}
 .conLinksSec{
 
   height: calc(100vh - 5vmax  );

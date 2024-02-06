@@ -4,7 +4,11 @@ import { NavLink } from "react-router-dom"
 
 export default () => {
 
+function handleClick () {
 
+   console.log(this)
+    
+}
     return ( 
     
     
@@ -24,7 +28,7 @@ export default () => {
 
                         <li ><NavLink to="/" className="navLink m-2 text-[1rem] lg:text-[1.25rem]">About</NavLink></li>
                         <li ><NavLink to="/projects" className="navLink m-2 text-[1rem] lg:text-[1.25rem]">Projects</NavLink></li>
-                        <li ><NavLink to="/contact" className="navLink m-2 text-[1rem] lg:text-[1.25rem]">Contact</NavLink></li>
+                        <li onClick={handleClick}><NavLink to="/contact" className="navLink m-2 text-[1rem] lg:text-[1.25rem]">Contact</NavLink></li>
                         <li className="m-2 rounded-lg "><button class="rbutton text-[1rem] lg:text-[1.25rem] ">Resume</button></li>
                     </ul>
 
