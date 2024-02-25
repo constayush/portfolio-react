@@ -40,7 +40,7 @@ export default () => {
                     <ul>
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://goboxin.vercel.app/" target="blank"> <span className="orange">•</span> GO BOXIN! - a shadow boxing trainer</a></li>
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://weather-app-constayush.vercel.app/" target="blank"> <span className="orange">•</span> Weather App - simple weather application</a></li>
-                        <li className="minnorprojectsLinks mb-[.75rem]"><a href="#" target="blank"> <span className="orange">•</span> Rock Paper Scissors - you vs computer game</a></li>
+                        <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://rock-paper-scissors-constayush.vercel.app/" target="blank"> <span className="orange">•</span> Rock Paper Scissors - you vs computer game</a></li>
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="#" target="blank"> <span className="orange">•</span> project</a></li>
                         <li className="minnorprojectsLinks mb-[.4rem] "><a href="#" target="blank"> <span className="orange">•</span> project</a></li>
                     </ul>

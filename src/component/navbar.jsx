@@ -6,13 +6,13 @@ export default () => {
 
     function handleClick() {
 
-        console.log(this)
+        
 
     }
     return (
 
 
-        <nav className="fixed  z-[999] navbar flex justify-between w-[100vw] h-[3rem] p-[2rem] lg:h-[6rem] bg-[#19181B] items-center">
+        <nav className="fixed  z-[9] navbar flex justify-between w-[100vw] h-[3rem] p-[2rem] lg:h-[6rem] bg-[#19181B] items-center">
             <a href="#">
                 <div className="logo">
                     <h1 className="ayush text-2xl lg:text-4xl"><a href="/">As.</a></h1>
@@ -32,7 +32,6 @@ export default () => {
                 </ul>
 
             </div>
-
 
 
 

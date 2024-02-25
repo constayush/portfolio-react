@@ -7,7 +7,7 @@ body {
   background-color: #19181B;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  overflow-x: hidden;
+ 
   /* scroll-snap-points-y: repeat(100vh); */
   /* scroll-snap-type: y mandatory; */
 }
@@ -104,7 +104,7 @@ body {
 
 .nameH1 {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
+
   font-weight: 600;
   color: #FFF3DD;
 
@@ -148,15 +148,6 @@ color: #fe9400;
 
 
 
-::-webkit-scrollbar {
-
-  background: #130bfb00;
-}
-
-::-webkit-scrollbar-thumb{
-
-  background: #bbad95;
-}
 
 
 
@@ -281,8 +272,6 @@ color: #fe9400;
 
 
 .contact{
-
-
   scroll-snap-type: y mandatory;
 }
 .conChild{
@@ -302,9 +291,7 @@ color: #fe9400;
    top:0;
 
 }
-.e{
- 
-}
+
 .conLinksSec{
 
   height: calc(100vh - 5vmax  );
@@ -314,7 +301,7 @@ color: #fe9400;
 
 .networks {
 
-  height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,11 +319,18 @@ color: #fe9400;
   padding: 0.6rem 0.6rem;
   color: #444;
   transition: color 140ms ease;
-  margin: 0 0.4rem;
+
 }
 
 
+.stack{
+  position: sticky;
+  top: 0;
 
+}
+.s{
+height: calc(100vh -6rem);
+}
 
 
 
