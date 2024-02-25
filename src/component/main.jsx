@@ -59,9 +59,9 @@ export default () => {
 
 
 
-            <div className=' w-full lg:h-[89vh]  stack bg-[#101010] flex items-center justify-center gap-10 p-14'>
-                <Link to='/projects'><div className='w-[20rem] h-[20rem] bg-stone-300 flex items-center justify-center subH1'>projects</div></Link>
-                <Link to='/contact'><div className='w-[20rem] h-[20rem] bg-stone-300 flex items-center justify-center  subH1'>contact</div></Link>
+            <div className=' w-full lg:h-[89vh]  stack bg-[#101010] flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
+                <Link to='/projects'><div className='lg:w-[20rem] lg:h-[20rem] w-[12rem] h-[14rem] bg-stone-300 flex items-center justify-center subH1'>projects</div></Link>
+                <Link to='/contact'><div className=' lg:w-[20rem] lg:h-[20rem] w-[12rem] h-[14rem] bg-stone-300 flex items-center justify-center  subH1'>contact</div></Link>
             </div>
 
 
