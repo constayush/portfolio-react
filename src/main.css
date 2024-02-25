@@ -109,42 +109,25 @@ body {
   color: #FFF3DD;
 
 }
+.myr{
+  font-family: 'Montserrat', sans-serif;
 
+  font-weight: 600;
+  color: rgba(255, 191, 71, 0.936);
+}
 .subH1 {
 
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
+
   font-weight: 600;
   color: #938b7b;
 }
 
 
-.aboutPara {
 
 
 
 
-  color: #938b7b;
-}
-
-.resumePara {
-  color: #ffbe47;
-  font-family: 'Montserrat', sans-serif;
-  transition: all .3s ease;
-}
-
-.resumePara:hover {
-  cursor: pointer;
-
-  margin-left: 1.5rem;
-
-}
-
-.socailLi {
-  border: #19181B solid 1px;
-
-  color: #ffbe47;
-}
 
 .ayush {
   font-family: 'Rubik Maze', system-ui;
@@ -161,10 +144,7 @@ color: #fe9400;
 
 /* font-family: 'Space Grotesk', sans-serif; */
 
-.socailLi {
 
-  transition: all .3s ease;
-}
 
 
 
@@ -182,33 +162,6 @@ color: #fe9400;
 
 
 
-.linkedin:hover {
-  content: url('../public/linkedinH.svg');
-
-}
-
-.mail:hover {
-  content: url('../public/mailH.svg');
-
-}
-
-.instagram:hover {
-  content: url('../public/instagramH.svg');
-
-}
-
-.github:hover {
-  content: url('../public/githubH.svg');
-
-}
-
-.socailLi:hover {
-  cursor: pointer;
-  mix-blend-mode: multiply;
-
-
-  transform: scale(1.125);
-}
 
 
 
@@ -356,3 +309,36 @@ color: #fe9400;
 
   height: calc(100vh - 5vmax  );
 }
+
+
+
+.networks {
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.netbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #444;
+  color: #444;
+}
+.netbox .icon {
+  padding: 0.6rem 0.6rem;
+  color: #444;
+  transition: color 140ms ease;
+  margin: 0 0.4rem;
+}
+
+
+
+
+
+
+
+
