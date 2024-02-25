@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 html,
 body {
   margin: 0;
   background-color: #19181B;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  overflow-x: hidden;
   /* scroll-snap-points-y: repeat(100vh); */
   /* scroll-snap-type: y mandatory; */
 }
