@@ -1,15 +1,33 @@
 import React from 'react'
 
-function Contact() {
+import { useRef } from 'react'
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import '../../src/locomotive-scoll.css'
+function Contact() {const containerRef = useRef(null)
     return (
       
+<LocomotiveScrollProvider
+  options={
+    {
+      smooth: true,
+      
+    }
+  }
+  watch={
+    [
+      
+      
+      
+    ]
+  }
+  containerRef={containerRef}
+>
+        <div data-scroll-container ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
 
-        <div className='conMain w-full h-fit flex flex-col justify-center items-center'>
 
+            <div  data-scroll-section data-scroll data-scroll-speed='2' data-scroll-direction='horizontal' className='conElems conLinksSec conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[4rem] sm:ml-[2rem]'><h1 className=''>Let's make<br />something great!</h1></div>
 
-            <div className='conElems conLinksSec conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[4rem] sm:ml-[2rem]'><h1 className=''>Let's make<br />something great!</h1></div>
-
-            <div className='conElems h-[100vh]  w-[95vw] md:w-[70vw]  pt-[10vmax] p-[2rem] flex flex-col justify-start  text-left '>
+            <div  data-scroll-section className='conElems h-[100vh]  w-[95vw] md:w-[70vw]  pt-[10vmax] p-[2rem] flex flex-col justify-start  text-left '>
 
                 <h1 className='   conH1 text-[3rem] mb-[6vh] '>Contact.</h1>
 
@@ -45,7 +63,7 @@ function Contact() {
 
 
 
-
+</LocomotiveScrollProvider>
 
 
 

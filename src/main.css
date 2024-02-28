@@ -332,7 +332,24 @@ color: #fe9400;
 height: calc(100vh -6rem);
 }
 
+.LINKTO{
 
+  transition: all .30s ease;
+}
 
+.LINKTO:hover{
 
+ border: #fe9400 4px solid;
 
+}
+
+.aText{
+  opacity: 0;
+  transform: rotate(80deg);
+
+}
+.animeText{
+
+  opacity: 1;
+  transform: rotate(180deg);
+}

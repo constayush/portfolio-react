@@ -1,13 +1,31 @@
 import SmallComp from "./ui/smallComp"
 import LongComp from "./ui/longComp"
-
+import { useLocomotiveScroll } from 'react-locomotive-scroll/'
+import { useRef } from 'react'
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import '../../src/locomotive-scoll.css'
 export default () => {
-
+    const containerRef = useRef(null)
     return (
+<LocomotiveScrollProvider
+  options={
+    {
+      smooth: true,
+      
+    }
+  }
+  watch={
+    [
+      
+      
+      
+    ]
+  }
+  containerRef={containerRef}
+>
+        <div data-scroll-container ref={containerRef} className="w-[98vw] h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
 
-        <div className="w-[98vw] h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
-
-            <h1 className="projectsH1 text-[2rem] lg:text-[4rem] my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
+            <h1  className="projectsH1 text-[2rem] lg:text-[4rem] my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
 
             <div className="projectParas  w-[80%] lg:w-[57rem] flex flex-col justify-center items-center mt-4 overflow-hidden">
 
@@ -21,21 +39,21 @@ export default () => {
             </div>
 
             <div className="majorProjects flex flex-col md:flex-row justify-center items-center overflow-hidden gap-4 lg:gap-0">
-                <div className="flex flex-col gap-4 lg:gap-0">
-                    <LongComp name='Project' description=' building i have homework to do :['  link = 'https:/github.com/constayush'/>
-                    <SmallComp name='Project' description=' building i have homework to do :[' link = 'https:/github.com/constayush'/>
+                <div data-scroll data-scroll-speed='2' data-scroll-direction='vertical' className="flex flex-col gap-4 lg:gap-0 ">
+                    <LongComp  name='Project' description=' building i have homework to do :['  link = 'https:/github.com/constayush'/>
+                    <SmallComp  name='Project' description=' building i have homework to do :[' link = 'https:/github.com/constayush'/>
                 </div>
-                <div className="flex flex-col gap-4 lg:gap-0">
+                <div data-scroll data-scroll-speed='2' data-scroll-direction='vertical' className="flex flex-col gap-4 lg:gap-0">
                     <SmallComp name='Project' description=' building i have homework to do :[' link = 'https://github.com/constayush'/>
                     <LongComp name='Project' description=' building i have homework to do :['  link = 'https://github.com/constayush'/>
                 </div>
             </div>
 
             <div className="minnorProjectsWapper w-[80%] lg:w-[57rem] mt-[5rem] mb-[5rem] overflow-hidden">
-                <h3 className="minnorH1 mb-[1rem]">Minnor Projects.</h3>
-                <p className="projectPara mb-[1rem]">Discover a collection of my minor projects — small yet impactful endeavors that reveal the essence of my ongoing learning and creative exploration. Each minor project serves as a pixel, contributing to the larger canvas of my journey.</p>
+                <h3 data-scroll-class='animeText'  data-scroll data-scroll-speed='2' className="aText minnorH1 mb-[1rem]">Minnor Projects.</h3>
+                <p  data-scroll-class='animeText' data-scroll data-scroll-speed='2' className=" aText projectPara mb-[1rem]">Discover a collection of my minor projects — small yet impactful endeavors that reveal the essence of my ongoing learning and creative exploration. Each minor project serves as a pixel, contributing to the larger canvas of my journey.</p>
 
-                <div className="minnorProjects w-full h-fit] rounded-lg">
+                <div data-scroll data-scroll-speed='2' className="minnorProjects w-full h-fit] rounded-lg">
 
                     <ul>
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://goboxin.vercel.app/" target="blank"> <span className="orange">•</span> GO BOXIN! - a shadow boxing trainer</a></li>
@@ -49,7 +67,7 @@ export default () => {
             </div>
 
         </div>
-
+</LocomotiveScrollProvider>
     )
 
 }
