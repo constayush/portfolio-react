@@ -27,13 +27,13 @@ export default () => {
   containerRef={containerRef}
 >
 
-        <div data-scroll-container ref={containerRef}  className=' w-full h-[300vh] '  >
+        <div data-scroll-container ref={containerRef}  className=' w-full h-fit lg:h-[300vh] '  >
 
 
 
 
 
-            <div data-scroll data-scroll-speed='2' data-scroll-direction='horizontal'   className='w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center stack'>
+            <div data-scroll data-scroll-speed='2' data-scroll-direction='horizontal'   className='w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
 
 
                 <h1 className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1>
@@ -50,12 +50,12 @@ export default () => {
 
 
 
-            <div  className=' w-full lg:h-[100vh]  stack bg-[#141314] pt-[7rem] p-x-14'>
+            <div  className=' w-full lg:h-[100vh] flex flex-col justify-center items-center   bg-[#141314] pt-[7rem] p-x-14'>
 
                 <div className='flex flex-col justify-center items-center  '>
-                    <p  className='subH1   text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript</p>
-                    <p  className='subH1    text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>Currently, pursuing a Diploma in Computer Science and Engineering </p>
-                    <p  className='subH1    text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>learning MERN stack wth tailwind and typescript </p>
+                    <p  className='subH1 p-2 text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript</p>
+                    <p  className='subH1 p-2  text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>Currently, pursuing a Diploma in Computer Science and Engineering </p>
+                    <p  className='subH1 p-2  text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>learning MERN stack wth tailwind and typescript </p>
                 </div> 
 
                 <div className='flex flex-col justify-center items-center  '>
@@ -76,9 +76,9 @@ export default () => {
             </div>
 
 
-            <div   className=' w-full lg:h-[100vh]   stack bg-[#101010] flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
-                <Link   className='LINKTO' to='/projects'><div className='lg:w-[20rem] lg:h-[20rem] w-[12rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link>
-                <Link   className='LINKTO' to='/contact'><div className=' lg:w-[20rem] lg:h-[20rem] w-[12rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link>
+            <div   className=' w-full lg:h-[100vh]  h-[100vh]  bg-[#101010] flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
+                <Link   className=' LINKTO' to='/projects'><div className='lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link>
+                <Link   className=' LINKTO' to='/contact'><div className=' lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link>
             </div>
 
 

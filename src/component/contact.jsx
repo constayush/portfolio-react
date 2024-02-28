@@ -39,11 +39,11 @@ function Contact() {const containerRef = useRef(null)
 
                     <a href='' className='conLinks'>aayush@mail.com</a>
 
-                    <a target='blank' href='https://www.linkedin.com/in/constayush/' className='conLinks'>linkedin</a>
+                    <a data-scroll data-scroll-class='aniText'  target='blank' href='https://www.linkedin.com/in/constayush/' className='conLinks'>linkedin</a>
 
-                    <a target='blank' href='https://github.com/constayush' className='conLinks'>github</a>
+                    <a data-scroll data-scroll-class='aniText'  target='blank' href='https://github.com/constayush' className='conLinks'>github</a>
 
-                    <a target='blank' href='https://www.instagram.com/maihoonayush/' className='conLinks'>instagram</a>
+                    <a data-scroll data-scroll-class='aniText'  target='blank' href='https://www.instagram.com/maihoonayush/' className='conLinks'>instagram</a>
 
                 </div>
 

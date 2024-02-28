@@ -334,7 +334,7 @@ height: calc(100vh -6rem);
 
 .LINKTO{
 
-  transition: all .30s ease;
+  transition: border .1s ease;
 }
 
 .LINKTO:hover{
@@ -345,11 +345,22 @@ height: calc(100vh -6rem);
 
 .aText{
   opacity: 0;
-  transform: rotate(80deg);
-
+  transform: translate(0rem,10rem);
+transition: all .5s ease;
 }
 .animeText{
 
   opacity: 1;
-  transform: rotate(180deg);
+  transform: translate(0);
+}
+.aniText{
+
+  opacity: 1;
+  transform: translate(0);
+}
+
+.pText{
+  opacity: 0;
+  transform: translate(10rem,0rem);
+transition: all .5s ease;
 }

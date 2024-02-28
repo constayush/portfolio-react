@@ -4,6 +4,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll/'
 import { useRef } from 'react'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import '../../src/locomotive-scoll.css'
+import { Link } from "react-router-dom/dist/react-router-dom.development"
 export default () => {
     const containerRef = useRef(null)
     return (
@@ -49,13 +50,13 @@ export default () => {
                 </div>
             </div>
 
-            <div className="minnorProjectsWapper w-[80%] lg:w-[57rem] mt-[5rem] mb-[5rem] overflow-hidden">
-                <h3 data-scroll-class='animeText'  data-scroll data-scroll-speed='2' className="aText minnorH1 mb-[1rem]">Minnor Projects.</h3>
-                <p  data-scroll-class='animeText' data-scroll data-scroll-speed='2' className=" aText projectPara mb-[1rem]">Discover a collection of my minor projects — small yet impactful endeavors that reveal the essence of my ongoing learning and creative exploration. Each minor project serves as a pixel, contributing to the larger canvas of my journey.</p>
+            <div data-scroll data-scroll-class='animeText' data-scroll-repeat className="aText minnorProjectsWapper w-[80%] lg:w-[57rem] mt-[5rem] mb-[5rem] overflow-hidden">
+                <h3  className=" minnorH1 mb-[1rem]">Minnor Projects.</h3>
+                <p   className="  projectPara mb-[1rem]">Discover a collection of my minor projects — small yet impactful endeavors that reveal the essence of my ongoing learning and creative exploration. Each minor project serves as a pixel, contributing to the larger canvas of my journey.</p>
 
-                <div data-scroll data-scroll-speed='2' className="minnorProjects w-full h-fit] rounded-lg">
+                <div data-scroll data-scroll-class='animeText' className=" minnorProjects w-full h-fit] rounded-lg">
 
-                    <ul>
+                    <ul >
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://goboxin.vercel.app/" target="blank"> <span className="orange">•</span> GO BOXIN! - a shadow boxing trainer</a></li>
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://weather-app-constayush.vercel.app/" target="blank"> <span className="orange">•</span> Weather App - simple weather application</a></li>
                         <li className="minnorprojectsLinks mb-[.75rem]"><a href="https://rock-paper-scissors-constayush.vercel.app/" target="blank"> <span className="orange">•</span> Rock Paper Scissors - you vs computer game</a></li>
@@ -65,7 +66,7 @@ export default () => {
                 </div>
 
             </div>
-
+            
         </div>
 </LocomotiveScrollProvider>
     )
