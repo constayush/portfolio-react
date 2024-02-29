@@ -3,12 +3,27 @@ import linkedin from '../../public/linked-in.svg'
 import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
 import { Link } from 'react-router-dom'
-
-import { useRef } from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from 'react'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import '../../src/locomotive-scoll.css'
 export default () => {
+
+gsap.registerPlugin(ScrollTrigger)
+
     const containerRef = useRef(null)
+    const scoialRef = useRef();
+
+    useEffect(() => {
+        const el = scoialRef.current;
+        gsap.fromTo(el, {translate: "0px 4rem"}, {
+            translate: "none", duration: 3, scrollTrigger: {
+                trigger: el,
+                scrub:true
+            }
+        })
+    }, [])
     return (
 <LocomotiveScrollProvider
   options={
@@ -64,7 +79,7 @@ export default () => {
                     
                     <div className='w-[2px] h-[10rem] lg:h-[15rem] bg-white'></div>
                     <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p></div>
-                <div className='networks mt-[2rem]'>
+                <div ref={scoialRef} className='networks mt-[2rem]'>
                     <div className='netbox rounded-lg w-[15rem] lg:w-[20rem]'>
                         <a  class="w-[5rem] lg:w-[4rem] icon " href="#"  ><img src={github} /></a>
                         <a  class="w-[5rem] lg:w-[4rem] icon " href="#"  ><img src={linkedin} /></a>
