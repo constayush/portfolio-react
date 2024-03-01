@@ -12,8 +12,8 @@ export default () => {
 
 
 
-containerRef = useRef(null)
-scoialRef = useRef(null)
+const containerRef = useRef(null)
+const scoialRef = useRef(null)
 
 
 
@@ -92,7 +92,7 @@ useEffect(()=>{
 
 
         </div>
-        
+
 
 
     )
