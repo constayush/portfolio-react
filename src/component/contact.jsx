@@ -1,27 +1,31 @@
 import React from 'react'
+import { useRef,useEffect } from 'react'
+import locomotiveScroll from 'locomotive-scroll'
 
-import { useRef } from 'react'
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+
 import '../../src/locomotive-scoll.css'
-function Contact() {const containerRef = useRef(null)
+function Contact() {
+  const containerRef = useRef(null)
+
+useEffect (()=>{
+
+  const scroll = new locomotiveScroll({
+
+    el: containerRef.current,
+
+    smooth: true,
+
+    smartphone: {
+      smooth: true
+    }
+
+  })
+})
+
+
+
     return (
       
-<LocomotiveScrollProvider
-  options={
-    {
-      smooth: true,
-      
-    }
-  }
-  watch={
-    [
-      
-      
-      
-    ]
-  }
-  containerRef={containerRef}
->
         <div data-scroll-container ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
 
 
@@ -50,22 +54,6 @@ function Contact() {const containerRef = useRef(null)
             </div>
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</LocomotiveScrollProvider>
-
-
 
 
     )
