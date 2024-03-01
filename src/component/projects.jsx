@@ -1,6 +1,6 @@
 import SmallComp from "./ui/smallComp"
 import LongComp from "./ui/longComp"
-import locomotiveScroll from "locomotive-scroll";
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useRef, useEffect } from 'react'
 import '../../src/locomotive-scoll.css'
 
@@ -12,20 +12,29 @@ export default () => {
 
 
 
-    useEffect(() => {
-        const scroll = new locomotiveScroll({
-          el: containerRef.current,
-          smooth: true,
-          smartphone: {
-            smooth: true
-          }
-        });
-      });
-
+  
 
 
 
     return (
+        <LocomotiveScrollProvider
+        options={
+          {
+            smooth: true,
+  
+            smartphone: {
+              smooth: true
+            },
+            tablet: {
+              smooth: true
+            }
+          }
+        }
+        watch={[]}
+  
+        containerRef={containerRef}
+  
+      >
        <div data-scroll-container ref={containerRef} className="w-[98vw] h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
 
             <h1  className="projectsH1 text-[2rem] lg:text-[4rem] my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
@@ -70,7 +79,7 @@ export default () => {
             </div>
             
         </div>
-
+     </LocomotiveScrollProvider>
     )
 
 }

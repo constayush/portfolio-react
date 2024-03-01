@@ -4,8 +4,7 @@ import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
 import { Link } from 'react-router-dom'
 import { useRef, useEffect } from 'react'
-import '../../src/locomotive-scoll.css'
-import locomotiveScroll from 'locomotive-scroll'
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 
 
 export default () => {
@@ -18,23 +17,26 @@ const scoialRef = useRef(null)
 
 
 
-useEffect(()=>{
-
-        const scroll = new locomotiveScroll({
-          el: containerRef.current,
-          smooth: true,
-          smartphone: {
-            smooth: true
-          }
-        });
- 
-},[])
-
-
-
 
     return (
-
+        <LocomotiveScrollProvider
+        options={
+          {
+            smooth: true,
+  
+            smartphone: {
+              smooth: true
+            },
+            tablet: {
+              smooth: true
+            }
+          }
+        }
+        watch={[]}
+  
+        containerRef={containerRef}
+  
+      >
 
         <div data-scroll-container ref={containerRef}  className=' w-full h-fit lg:h-[300vh] '  >
 
@@ -94,7 +96,7 @@ useEffect(()=>{
         </div>
 
 
-
+   </LocomotiveScrollProvider>
     )
 }
 
