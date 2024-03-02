@@ -2,21 +2,47 @@ import github from '../../public/github.svg'
 import linkedin from '../../public/linked-in.svg'
 import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
+import orange from "../../public/org.png"
 import { Link } from 'react-router-dom'
 import { useRef, useEffect } from 'react'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-
-
+import gsap from 'gsap'
+import { Power3 } from 'gsap'
 export default () => {
 
 
 
 const containerRef = useRef(null)
 const scoialRef = useRef(null)
+const nameRef = useRef(null)
 
 
+useEffect(()=>{
 
+  gsap.from('.nameH1',{
 
+    ease: Power3,
+    y: 100,
+    duration:.41,
+opacity: 0
+    
+    })
+
+    gsap.from('.subH1',{
+
+      y: 100,
+      duration:.41,
+  opacity: 0
+      
+      })
+      
+    gsap.from('.greeting',{
+
+      scale: 2,
+      duration:.41
+      })
+    
+})
 
     return (
         <LocomotiveScrollProvider
@@ -49,8 +75,8 @@ const scoialRef = useRef(null)
 
             <div data-scroll data-scroll-speed='2' data-scroll-direction='horizontal' lerp='1'  className='w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
 
-
-                <h1 className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1>
+<div className='flex justify-center items-center'> <h1 ref={nameRef} className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1></div>
+               
                 <p className='subH1   text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
 
 

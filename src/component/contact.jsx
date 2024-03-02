@@ -1,12 +1,24 @@
 import React from 'react'
 import { useRef, useEffect } from 'react'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-
+import {gsap, Power3} from 'gsap/dist/gsap'
 import '../../src/locomotive-scoll.css'
 function Contact() {
   const containerRef = useRef(null)
 
+useEffect(()=>{
 
+  gsap.from('.letsMakeH1',{
+
+    ease: Power3,
+    y: 100,
+    duration:.41,
+opacity: 0
+    
+    })
+
+
+})
 
 
   return (
@@ -34,7 +46,7 @@ function Contact() {
       <div data-scroll-container ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
 
 
-        <div data-scroll-section data-scroll data-scroll-speed='2' data-scroll-direction='horizontal' className='conElems conLinksSec conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'><h1 className=''>Let's make<br />something great!</h1></div>
+        <div data-scroll-section data-scroll data-scroll-speed='2' data-scroll-direction='horizontal' className='conElems conLinksSec conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'><h1 className='letsMakeH1'>Let's make<br />something great!</h1></div>
 
         <div data-scroll-section className='conElems lg:h-[100vh] h-fit  w-full md:w-[70vw]  pt-[10vmax] p-[2rem] flex flex-col justify-start  text-left '>
 
