@@ -106,19 +106,19 @@ opacity: 0
                     <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p></div>
                 <div  className='networks mt-[2rem]'>
                     <div className='netbox rounded-lg w-[15rem] lg:w-[20rem]'>
-                        <a  class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img src={github} /></a>
-                        <a  class="w-[5rem] lg:w-[4rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img src={linkedin} /></a>
-                        <a  class="w-[5rem] lg:w-[4rem] icon " href="https://www.instagram.com/maihoonayush/" ><img src={insta} /></a>
-                        <a  class="w-[5rem] lg:w-[4rem] icon " href="#" ><img src={mail} /></a>
+                        <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img           className='socailImg'  src={github} /></a>
+                        <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img className='socailImg'  src={linkedin} /></a>
+                        <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.instagram.com/maihoonayush/" ><img  className='socailImg' src={insta} /></a>
+                        <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="#" ><img  className='socailImg' src={mail} /></a>
                     </div>
                 </div>
 
             </div>
 
 
-            <div ref={scoialRef} className=' w-full h-[100vh]  bg-[#101010] flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
-                <Link className=' LINKTO' to='/contact'><div className=' lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link>
-                <Link className=' LINKTO' to='/projects'><div className='lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link>
+            <div ref={scoialRef} className='footer w-full h-[100vh]  bg-[#101010] flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
+                <Link className='' to='/contact'><div className='  LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link>
+                <Link className='' to='/projects'><div className=' LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link>
             </div>
 
 

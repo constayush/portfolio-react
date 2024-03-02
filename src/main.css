@@ -334,13 +334,14 @@ height: calc(100vh -6rem);
 
 .LINKTO{
 
-  transition: border .1s ease;
+  transition: all .4s ease;
 }
 
 .LINKTO:hover{
 
+transform: scale(2.2);
  border: #fe9400 4px solid;
-
+border-radius: 100%;
 }
 
 .aText{
@@ -371,7 +372,14 @@ transition: all .5s ease;
   appearance:none;
 }
 
-.bar:checked{
+.socailImg:hover{
 
-  
+filter: brightness(4);
+
+}
+
+
+.footer{
+
+
 }
