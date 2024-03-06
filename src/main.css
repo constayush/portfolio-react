@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html,
 body {
   margin: 0;
@@ -339,9 +340,9 @@ height: calc(100vh -6rem);
 
 .LINKTO:hover{
 
-transform: scale(2.2);
- border: #fe9400 4px solid;
-border-radius: 100%;
+background-color: #ffdfa4;
+color: #19181B;
+border-radius: 10px;
 }
 
 .aText{
@@ -375,11 +376,5 @@ transition: all .5s ease;
 .socailImg:hover{
 
 filter: brightness(4);
-
-}
-
-
-.footer{
-
 
 }

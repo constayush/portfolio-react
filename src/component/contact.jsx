@@ -1,8 +1,7 @@
 import React from 'react'
 import { useRef, useEffect } from 'react'
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import {gsap, Power3} from 'gsap/dist/gsap'
-import '../../src/locomotive-scoll.css'
+import '../../src/locomotive-scroll.css'
 function Contact() {
   const containerRef = useRef(null)
 
@@ -22,33 +21,13 @@ opacity: 0
 
 
   return (
-    <LocomotiveScrollProvider
-      options={
-        {
-          smooth: true,
-            smartphone: {
-              smooth: true,
-              
-            },
-            tablet: {
-              smooth: true
-            },
-            touchMultiplier:4,
-            multiplier: 1.1, 
-            lerp:	0.065
-        }
-      }
-      watch={[]}
-
-      containerRef={containerRef}
-
-    >
-      <div data-scroll-container ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
+   
+      <div ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
 
 
-        <div data-scroll-section data-scroll data-scroll-speed='2' data-scroll-direction='horizontal' className='conElems conLinksSec conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'><h1 className='letsMakeH1'>Let's make<br />something great!</h1></div>
+        <div className='conElems conLinksSec conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'><h1 className='letsMakeH1'>Let's make<br />something great!</h1></div>
 
-        <div data-scroll-section className='conElems lg:h-[100vh] h-fit  w-full md:w-[70vw]  pt-[10vmax] p-[2rem] flex flex-col justify-start  text-left '>
+        <div  className='conElems lg:h-[100vh] h-fit  w-full md:w-[70vw]  pt-[10vmax] p-[2rem] flex flex-col justify-start  text-left '>
 
           <h1 className='   conH1 text-[3rem] mb-[6vh] '>Contact.</h1>
 
@@ -60,11 +39,11 @@ opacity: 0
 
             <a href='' className='conLinks'>aayush@mail.com</a>
 
-            <a data-scroll data-scroll-class='aniText' target='blank' href='https://www.linkedin.com/in/constayush/' className='conLinks'>linkedin</a>
+            <a target='blank' href='https://www.linkedin.com/in/constayush/' className='conLinks'>linkedin</a>
 
-            <a data-scroll data-scroll-class='aniText' target='blank' href='https://github.com/constayush' className='conLinks'>github</a>
+            <a  target='blank' href='https://github.com/constayush' className='conLinks'>github</a>
 
-            <a data-scroll data-scroll-class='aniText' target='blank' href='https://www.instagram.com/maihoonayush/' className='conLinks'>instagram</a>
+            <a class='aniText' target='blank' href='https://www.instagram.com/maihoonayush/' className='conLinks'>instagram</a>
 
           </div>
 
@@ -72,7 +51,7 @@ opacity: 0
 
       </div>
 
-    </LocomotiveScrollProvider>
+
   )
 }
 

@@ -1,8 +1,7 @@
 import SmallComp from "./ui/smallComp"
 import LongComp from "./ui/longComp"
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useRef, useEffect } from 'react'
-import '../../src/locomotive-scoll.css'
+import '../../src/locomotive-scroll.css'
 import{gsap,Power3}from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 
@@ -14,58 +13,10 @@ export default () => {
 
     const containerRef = useRef(null)
 
-useEffect(()=>{
-
-
-  gsap.from('.projectsH1',{
-    ease: Power3,
-    y: 100,
-    duration:.41,
-opacity: 0
-    
-    })
-
-
-    gsap.from('.projectParas',{
-      ease: Power3,
-      y: 100,
-      duration:.41,
-  opacity: 0
-      
-      })
-
-
-
-
-})
-
   
-
-
-
     return (
-        <LocomotiveScrollProvider
-        options={
-          {
-            smooth: true,
-            smartphone: {
-              smooth: true,
-              
-            },
-            tablet: {
-              smooth: true
-            },
-            touchMultiplier:3.5,
-            multiplier: 1.1, 
-            lerp:	0.065
-          }
-        }
-        watch={[]}
-  
-        containerRef={containerRef}
-  
-      >
-       <div data-scroll-container ref={containerRef} className="w-[98vw] h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
+       
+       <div  ref={containerRef} className="w-[98vw] h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
 
             <h1  className="projectsH1 text-[2rem] lg:text-[4rem] my-[5rem] lg:my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
 
@@ -109,7 +60,7 @@ opacity: 0
             </div>
             
         </div>
-     </LocomotiveScrollProvider>
+
     )
 
 }
