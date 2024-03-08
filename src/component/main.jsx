@@ -52,21 +52,13 @@ const skillsH1 =useRef(null)
       },
   });
 
-//     let heading = gsap.from(nameRef.current, {
+    let heading = gsap.from(nameRef.current, {
+      ease: Power3,
+      y: 100,
+      duration: .41,
+      opacity: 0
 
-//       scrollTrigger: {
-// trigger : nameRef.current,
-// scrub:true,
-
-
-
-//       },
-//       ease: Power3,
-     
-//       duration: .41,
-//       opacity: 0
-
-//     })
+    })
 
 
 
