@@ -4,7 +4,7 @@ function LongComp(props) {
   return (
     <a href={props.link} target='blank'>
 
-      <div className='longcomp rounded-lg  m-[.5vmax] w-[15rem] lg:w-[28rem] h-[20rem] lg:h-[40rem]' >
+      <div className='longcomp rounded-lg  m-[.5vmax] w-[15rem] lg:w-[28rem] h-[20rem] lg:h-[40rem] ' >
 
 
         <div className=' CompMainContent w-full h-full flex flex-col justify-end  '>

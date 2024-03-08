@@ -7,7 +7,7 @@ body {
   margin: 0;
   background-color: #19181B;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+
  
   /* scroll-snap-points-y: repeat(100vh); */
   /* scroll-snap-type: y mandatory; */
@@ -119,8 +119,8 @@ body {
 .subH1 {
 
   font-family: 'Montserrat', sans-serif;
-
-  font-weight: 600;
+  letter-spacing:.09rem ;
+  font-weight: 400;
   color: #938b7b;
 }
 
@@ -176,12 +176,12 @@ color: #fe9400;
 .smallcomp {
 
 
-  border: #ffbe47 1px solid;
+  border: #8b8986 1px solid;
 }
 
 .longcomp {
 
-  border: #ffbe47 1px solid;
+  border: #8b8986 1px solid;
 }
 
 .projectPara {
@@ -273,11 +273,11 @@ color: #fe9400;
 
 
 .contact{
-  scroll-snap-type: y mandatory;
+
 }
 .conChild{
 
-  scroll-snap-align: start;
+
 
   position: sticky ;
   top:0;
@@ -286,8 +286,8 @@ color: #fe9400;
 
 
 .conElems{ 
-   scroll-snap-align:end;
-   background-color: #19181B;
+ 
+
    
    top:0;
 
@@ -377,4 +377,36 @@ transition: all .5s ease;
 
 filter: brightness(4);
 
+}
+
+
+.center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.gg{
+
+  overflow: visible;
+}
+
+.glass{
+
+  background-color: #d5d5d5c3;
+
+  backdrop-filter: blur(15px);
+}
+
+.skillsH1{
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 600;
+  color: #161615;
+
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }

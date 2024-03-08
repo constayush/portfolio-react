@@ -4,12 +4,48 @@ import { useRef, useEffect } from 'react'
 import '../../src/locomotive-scroll.css'
 import{gsap,Power3}from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-
-
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import LocomotiveScroll from 'locomotive-scroll';
 gsap.registerPlugin(ScrollTrigger)
+
+
 export default () => {
 
+const swiper = useRef(null)
 
+
+    useEffect(()=>{
+        gsap.from('.projectsH1',{
+
+            ease: Power3,
+            y: 100,
+            duration:.41,
+        opacity: 0
+            
+            })
+
+
+
+            const locomotive = new LocomotiveScroll({
+                lenisOptions: {
+                    wrapper: window,
+                    content: document.documentElement,
+                    lerp: 0.1,
+                    duration: 1.2,
+                    orientation: 'vertical',
+                    gestureOrientation: 'vertical',
+                    smoothWheel: true,
+                    smoothTouch: true,
+                    wheelMultiplier: 1,
+                    touchMultiplier: .8,
+                    normalizeWheel: true,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+                },
+            });
+
+
+    })
 
     const containerRef = useRef(null)
 
@@ -33,12 +69,12 @@ export default () => {
 
             <div className="majorProjects flex flex-col md:flex-row justify-center items-center overflow-hidden gap-4 lg:gap-0">
                 <div className="flex flex-col gap-4 lg:gap-0 firstSec">
-                    <LongComp  name='Project' description=' building i have homework to do :['  link = 'https:/github.com/constayush'/>
-                    <SmallComp  name='Project' description=' building i have homework to do :[' link = 'https:/github.com/constayush'/>
+                    <LongComp  name='Project' description=' uploading soon... I have homework to do :('  link = 'https:/github.com/constayush'/>
+                    <SmallComp  name='Project' description=' uploading soon... I have homework to do :(' link = 'https:/github.com/constayush'/>
                 </div>
                 <div  className="flex flex-col gap-4 lg:gap-0 secondSec">
-                    <SmallComp name='Project' description=' building i have homework to do :[' link = 'https://github.com/constayush'/>
-                    <LongComp name='Project' description=' building i have homework to do :['  link = 'https://github.com/constayush'/>
+                    <SmallComp name='Project' description=' uploading soon... I have homework to do :(' link = 'https://github.com/constayush'/>
+                    <LongComp name='Project' description=' uploading soon... I have homework to do :('  link = 'https://github.com/constayush'/>
                 </div>
             </div>
 
@@ -58,6 +94,26 @@ export default () => {
                 </div>
 
             </div>
+
+
+
+
+{/* 
+          
+<div ref={swiper} className="swiper">
+
+   
+     <div  className=" w-[20rem] h-[20rem] bg-red-200">Slide 1</div>
+     <div  className=" w-[20rem] h-[20rem] bg-red-200">Slide 2</div>
+     <div  className=" w-[20rem] h-[20rem] bg-red-200">Slide 3</div>
+
+
+ 
+</div> */}
+
+
+
+
             
         </div>
 
