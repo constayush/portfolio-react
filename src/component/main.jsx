@@ -100,13 +100,14 @@ const skillsH1 =useRef(null)
 
   return (
 
-    <div ref={containerRef} id='top' className='smooth-scroll w-full h-fit lg:h-fit '  >
+
+    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit lg:h-fit '  >
 
 
 
 
 
-      <div ref={nameRef} className='w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
+      <div ref={nameRef} className= ' w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
 
         <div data-scroll data-scroll-direction='horizontal' className='flex justify-center items-center'> <h1 className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1></div>
 
@@ -118,15 +119,14 @@ const skillsH1 =useRef(null)
 
 
 
+<hr className='hrd'/>
+      <div className=' bggra'>
 
 
-
-
-
-      <div lerp='0.01' className=' w-full lg:h-[100vh] flex flex-col justify-center items-center   bg-[#141314] pt-[3rem] px-[1rem]'>
+      <div lerp='0.01' className=' w-full lg:h-[100vh] flex flex-col justify-center items-center    lg:pt-[0] pt-[3rem] px-[1rem]'>
 
         <div ref={para} className='flex flex-col justify-center items-center  '>
-          <p data-scroll data-scroll-speed='.1' className='subH1 p-2 text-[.8rem] text-center lg:text-[1.1rem] mb-[]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript
+          <p data-scroll data-scroll-speed='0.03' className='subH1 p-2 text-[.8rem] text-center lg:text-[1.1rem] mb-[]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript
 <br/>Currently, pursuing a Diploma in Computer Science and Engineering <br/>
       learning MERN stack wth tailwind and typescript </p>
           <p className='subH1 p-2  text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>and also i love oranges  </p>
@@ -154,11 +154,14 @@ const skillsH1 =useRef(null)
 
 
 
+<hr className='hrf'/>
+
+      <div className='w-full center flex-col '>
 
 
-      <div className='w-full center flex-col bg-[#0d0d0d] '>
-        <h1 ref={skillsH1} data-scroll data-scroll-speed='.1' className='w-fit h-[100vh] stack flex justify-center items-start pt-[15rem] nameH1 text-[2rem] lg:text-[3rem] '> My Stack of Skills<span className='greeting'>.</span></h1>
-
+      <div className='h-[100vh] stack  center   rounded-lg'>
+        <h1 ref={skillsH1} data-scroll data-scroll-speed='.1' className='w-fit h-[100vh] stack flex justify-center items-center lg:pt-[0rem] pt-[15rem] nameH1 text-[2rem] lg:text-[3rem] '> My Stack of Skills<span className='greeting'>.</span></h1>
+</div>
 
         <div className='h-[100vh] stack  center   rounded-lg'>
           <div className='center bg-[#f9f3e6] w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
@@ -224,14 +227,14 @@ const skillsH1 =useRef(null)
 
 
 
-      <footer ref={scoialRef} className='footer w-full h-fit lg:h-[100vh]  bg-[#0d0d0d] flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
+      <footer ref={scoialRef} className='footer w-full h-fit lg:h-[100vh]   flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
         <div ref={contactBox} className=''><Link className='' to='/contact'><div className='  LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link></div>
         <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link></div>
      
 {/* /     <a href='#top'>back to top</a> */}
      
       </footer>
-
+</div>
 
 
 

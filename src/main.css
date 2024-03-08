@@ -120,7 +120,7 @@ body {
 
   font-family: 'Montserrat', sans-serif;
   letter-spacing:.09rem ;
-  line-height: 2.5rem;
+
   font-weight: 400;
   color: #938b7b;
 }
@@ -410,4 +410,48 @@ align-items: center;
 .swiper {
   width: 600px;
   height: 300px;
+}
+
+
+.landing {
+  width: 100%;
+  /*   skew adds a 4.76 degree slope and the translateY equation is based on the fact that a 4.76 degree slope has a gradient of 1:12 */
+  -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+      -ms-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+          transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+  /*   And finally we account for the slope to make sure each section can occupy the full window... I added 10vw just to give it a little extra padding */
+  min-height: calc(100vh - (110vw/-12));
+}
+
+/* .landing:not(:last-child) *{
+  -webkit-transform: skew(0, 4.76deg) translateY(calc(50vw/12));
+      -ms-transform: skew(0, 4.76deg) translateY(calc(50vw/12));
+          transform: skew(0, 4.76deg) translateY(calc(50vw/12));
+  margin-top: calc(50vw/-12);
+}
+  
+.landing:last-child {
+  position: relative;
+  -webkit-transform: skew(0);
+      -ms-transform: skew(0);
+          transform: skew(0);
+  margin-top: calc(100vw/-12);
+  padding-top: calc(100vw/12);
+  min-height: 100vh;
+  z-index: -1;
+} */
+
+
+.bggra{background: rgb(25,24,27);
+  background: linear-gradient(153deg, rgba(25,24,27,1) 0%, rgba(10,10,10,1) 96%);
+}
+
+.hrd{
+
+  border: #4f4f4f 1px solid;
+}
+
+.hrf{
+
+  border: #4f4f4f 1px dashed;
 }
