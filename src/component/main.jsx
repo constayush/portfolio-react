@@ -52,94 +52,38 @@ const skillsH1 =useRef(null)
       },
   });
 
-    let heading = gsap.from(nameRef.current, {
+//     let heading = gsap.from(nameRef.current, {
 
-      ease: Power3,
-      y: 100,
-      duration: .41,
-      opacity: 0
-
-    })
+//       scrollTrigger: {
+// trigger : nameRef.current,
+// scrub:true,
 
 
-    // let projectBoxAnimation = gsap.from(projectBox.current, {
-    //   scrollTrigger: {
-    //     trigger: projectBox.current,
-    //     scrub: true,
-    //   },
-    //   ease: Power3,
-    //   x: "200px",
-    //   duration: .41,
-    //   opacity: 0
 
-    // })
+//       },
+//       ease: Power3,
+     
+//       duration: .41,
+//       opacity: 0
+
+//     })
 
 
-    // let contactBoxAnimation = gsap.from(contactBox.current, {
-    //   scrollTrigger: {
-    //     trigger: contactBox.current,
-    //     scrub: true,
-    //   },
-    //   ease: Power3,
-    //   x: "-200px",
-    //   duration: .41,
-    //   opacity: 0
-
-    // })
 
     let barAnimation = gsap.from(bar.current, {
-      scrollTrigger: {
-        trigger: bar.current,
-        scrub: true,
-      },
+  
       ease: Power3,
 
       rotate: 360,
-      duration: .41,
-      opacity: 0
+      duration: 10,
+
+
+      repeat: -1
 
     })
 
-
-    let paraAnimation = gsap.from(para.current, {
-      scrollTrigger: {
-        trigger: para.current,
-        scrub: true,
-      },
-      ease: Power3,
-
-      y: 10,
-      duration: .41,
-
-
-    })
-
-    let networkAnimation = gsap.from(networks.current, {
-      scrollTrigger: {
-        trigger: networks.current,
-        scrub: true,
-      },
-      ease: Power3,
-
-      y: 10,
-      duration: .41,
-
-
-    })
-
-    let skillsH1Animation = gsap.to(skillsH1.current, {
-      scrollTrigger: {
-        trigger: skillsH1.current,
-        scrub: true,
-      },
-      ease: Power3,
 
     
-      y: 50,
-      duration: .41,
-
-
-    })
 
   })
 
@@ -164,7 +108,7 @@ const skillsH1 =useRef(null)
 
       <div ref={nameRef} className='w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
 
-        <div data-scroll  className='flex justify-center items-center'> <h1 className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1></div>
+        <div data-scroll data-scroll-direction='horizontal' className='flex justify-center items-center'> <h1 className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1></div>
 
         <p className='subH1   text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
 
@@ -182,7 +126,7 @@ const skillsH1 =useRef(null)
       <div lerp='0.01' className=' w-full lg:h-[100vh] flex flex-col justify-center items-center   bg-[#141314] pt-[3rem] px-[1rem]'>
 
         <div ref={para} className='flex flex-col justify-center items-center  '>
-          <p className='subH1 p-2 text-[.8rem] text-center lg:text-[1.1rem] mb-[]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript
+          <p data-scroll data-scroll-speed='.1' className='subH1 p-2 text-[.8rem] text-center lg:text-[1.1rem] mb-[]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript
 <br/>Currently, pursuing a Diploma in Computer Science and Engineering <br/>
       learning MERN stack wth tailwind and typescript </p>
           <p className='subH1 p-2  text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>and also i love oranges  </p>
@@ -194,7 +138,7 @@ const skillsH1 =useRef(null)
 
           <div ref={bar} className=''><img className='w-[80px]' src={orange} /></div>
           <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p></div>
-        <div ref={networks} className='networks mt-[2rem] p-[1rem]'>
+        <div ref={networks} data-scroll data-scroll-speed='.1' className='networks mt-[2rem] p-[1rem]'>
           <div className='netbox rounded-lg w-[15rem] lg:w-[20rem]'>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img className='socailImg' src={github} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img className='socailImg' src={linkedin} /></a>
@@ -213,7 +157,7 @@ const skillsH1 =useRef(null)
 
 
       <div className='w-full center flex-col bg-[#0d0d0d] '>
-        <h1 ref={skillsH1} className='w-fit h-[100vh] stack flex justify-center items-start pt-[15rem] nameH1 text-[2rem] lg:text-[3rem] '> My Array of Skills<span className='greeting'>.</span></h1>
+        <h1 ref={skillsH1} data-scroll data-scroll-speed='.1' className='w-fit h-[100vh] stack flex justify-center items-start pt-[15rem] nameH1 text-[2rem] lg:text-[3rem] '> My Stack of Skills<span className='greeting'>.</span></h1>
 
 
         <div className='h-[100vh] stack  center   rounded-lg'>
