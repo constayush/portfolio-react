@@ -455,3 +455,27 @@ align-items: center;
 
   border: #4f4f4f 1px dashed;
 }
+
+
+.cursor{
+
+  width: 20px;
+  height: 20px;
+
+  background-color: white;
+z-index: 999999;
+  position: absolute;
+
+}
+
+
+
+
+
+
+.card1:hover{
+
+
+color: #6d7071;
+
+}

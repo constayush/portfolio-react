@@ -10,8 +10,7 @@ import tslogo from "../../public/typescript.svg"
 import reactlogo from "../../public/react.svg"
 import gsaplogo from "../../public/gsap.svg"
 import tailwindlogo from "../../public/tailwind.svg"
-
-
+import { LampContainer } from './ui/lamp'
 import { useGSAP } from "@gsap/react";
 import { Link } from 'react-router-dom'
 import { useRef, useEffect } from 'react'
@@ -19,6 +18,7 @@ import gsap from 'gsap'
 import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
+import { current } from 'tailwindcss/colors'
 export default () => {
 
 
@@ -30,27 +30,27 @@ export default () => {
   const bar = useRef(null)
   const para = useRef(null)
   const networks = useRef(null)
-const skillsH1 =useRef(null)
+  const skillsH1 = useRef(null)
 
 
 
   useGSAP(() => {
     const locomotive = new LocomotiveScroll({
       lenisOptions: {
-          wrapper: window,
-          content: document.documentElement,
-          lerp: 0.1,
-          duration: 1.2,
-          orientation: 'vertical',
-          gestureOrientation: 'vertical',
-          smoothWheel: true,
-          smoothTouch: true,
-          wheelMultiplier: 1,
-          touchMultiplier: .8,
-          normalizeWheel: true,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        wrapper: window,
+        content: document.documentElement,
+        lerp: 0.1,
+        duration: 1.2,
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        smoothTouch: true,
+        wheelMultiplier: 1,
+        touchMultiplier: .8,
+        normalizeWheel: true,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
       },
-  });
+    });
 
     let heading = gsap.from(nameRef.current, {
       ease: Power3,
@@ -63,7 +63,7 @@ const skillsH1 =useRef(null)
 
 
     let barAnimation = gsap.from(bar.current, {
-  
+
       ease: Power3,
 
       rotate: 360,
@@ -75,7 +75,7 @@ const skillsH1 =useRef(null)
     })
 
 
-    
+
 
   })
 
@@ -88,146 +88,76 @@ const skillsH1 =useRef(null)
 
 
 
-
-
-  return (
-
-
-    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit lg:h-fit '  >
+  return (<>
 
 
 
 
-
-      <div ref={nameRef} className= ' w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
-
-        <div data-scroll data-scroll-direction='horizontal' className='flex justify-center items-center'> <h1 className='nameH1 text-[3rem] lg:text-[4rem]'>Hi, I am Ayush Srivastava</h1></div>
-
-        <p className='subH1   text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
-
-
-      </div>
+    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit lg:h-fit  bg-[#19181B] bg-dot-white/[0.2]'  >
 
 
 
+      <div ref={nameRef} className=' w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
+     
+        <div data-scroll data-scroll-direction='horizontal' className='flex gap-[1rem] justify-center items-center'> <div ref={bar} className=''><img className='w-[80px]' src={orange} /></div> <h1 className='name nameH1 text-[3rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1></div>
 
-<hr className='hrd'/>
-      <div className=' bggra'>
-
-
-      <div lerp='0.01' className=' w-full lg:h-[100vh] flex flex-col justify-center items-center    lg:pt-[0] pt-[3rem] px-[1rem]'>
-
-        <div ref={para} className='flex flex-col justify-center items-center  '>
-          <p data-scroll data-scroll-speed='0.03' className='subH1 p-2 text-[.8rem] text-center lg:text-[1.1rem] mb-[]'>Dreaming in HTML, crafting elegance with CSS, and sculpting experiences with JavaScript
-<br/>Currently, pursuing a Diploma in Computer Science and Engineering <br/>
-      learning MERN stack wth tailwind and typescript </p>
-          <p className='subH1 p-2  text-[.8rem] lg:text-[1.1rem] mb-[.7rem]'>and also i love oranges  </p>
-        </div>
-
-        <div className='flex flex-col justify-center items-center  '>
+        <p className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
 
 
 
-          <div ref={bar} className=''><img className='w-[80px]' src={orange} /></div>
-          <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p></div>
         <div ref={networks} data-scroll data-scroll-speed='.1' className='networks mt-[2rem] p-[1rem]'>
-          <div className='netbox rounded-lg w-[15rem] lg:w-[20rem]'>
+          <div className='netbox rounded-lg w-[15rem] lg:w-[15rem]'>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img className='socailImg' src={github} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img className='socailImg' src={linkedin} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.instagram.com/maihoonayush/" ><img className='socailImg' src={insta} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="#" ><img className='socailImg' src={mail} /></a>
           </div>
-        </div>
 
+ </div>
+
+
+
+
+{/* 
+<div className='flex justify-center items-center'>
+<h3 className='text-[1.5rem]'>My tech stack : </h3>
+<img className='w-[40px]' src={htmllogo}/>
+<img className='w-[40px]' src={csslogo}/>
+<img className='w-[40px]' src={jslogo}/>
+<img className='w-[40px]' src={tslogo}/>
+<img className='w-[40px]' src={tailwindlogo}/>
+<img className='w-[40px]' src={reactlogo}/>
+</div> */}
+
+
+
+
+       
+        <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p>
+    
       </div>
 
 
 
 
+      <hr className='hrd' />
 
 
-<hr className='hrf'/>
 
-      <div className='w-full center flex-col '>
+      <hr className='hrf' />
 
+      <div className=' bggra'>
+      <footer ref={scoialRef} className='footer w-full h-fit lg:h-[100vh]   flex flex-col items-center justify-center gap-10 p-14'>
 
-      <div className='h-[100vh] stack  center   rounded-lg'>
-        <h1 ref={skillsH1} data-scroll data-scroll-speed='.1' className='w-fit h-[100vh] stack flex justify-center items-center lg:pt-[0rem] pt-[15rem] nameH1 text-[2rem] lg:text-[3rem] '> My Stack of Skills<span className='greeting'>.</span></h1>
-</div>
-
-        <div className='h-[100vh] stack  center   rounded-lg'>
-          <div className='center bg-[#f9f3e6] w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px]  h-[100px]' src={htmllogo} />
-            <h3 className='text-[2rem] skillsH1'>HTML</h3>
-          </div>
+        <div className='flex lg:flex-row flex-col gap-10 p-14'>
+          <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg  LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link></div>
+          <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link></div>
         </div>
+        {/* /     <a href='#top'>back to top</a> */}
+        <p className='text-white'>© 2024 Ayush Srivastava</p>
 
-
-        <div className='h-[100vh] stack  center   rounded-lg'>
-          <div className='center glass w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px] h-[100px]' src={csslogo} />
-            <h3 className='text-[2rem] skillsH1'>CSS</h3>
-          </div>
-        </div>
-
-
-        <div className='h-[100vh] stack  center  rounded-lg'>
-          <div className='center glass w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px] h-[100px]' src={jslogo} />
-            <h3 className='text-[2rem] skillsH1'>JavaScript</h3>
-          </div>
-        </div>
-
-
-        <div className='h-[100vh] stack  center  rounded-lg'>
-          <div className='center glass w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px] h-[100px]' src={tslogo} />
-            <h3 className='text-[2rem] skillsH1'>TypeScript</h3>
-          </div>
-        </div>
-
-
-        <div className='h-[100vh] stack  center  rounded-lg'>
-          <div className='center glass w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px] h-[100px]' src={tailwindlogo} />
-            <h3 className='text-[2rem] skillsH1'>Tailwind</h3>
-          </div>
-        </div>
-
-
-        <div className='h-[100vh] stack  center  rounded-lg'>
-          <div className='center glass w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px] h-[100px]' src={reactlogo} />
-            <h3 className='text-[2rem] skillsH1'>React JS</h3>
-          </div>
-        </div>
-
-
-        <div className='h-[100vh] stack  center  rounded-lg'>
-          <div className='center glass w-[20rem] lg:w-[30rem] h-[25rem] rounded-lg flex-col gap-5 p-[1rem]'>
-            <img className='w-[200px] h-[100px]' src={gsaplogo} />
-            <h3 className='text-[2rem] skillsH1'>GSAP</h3>
-          </div>
-        </div>
-
-
-      </div>
-
-
-
-
-
-
-
-      <footer ref={scoialRef} className='footer w-full h-fit lg:h-[100vh]   flex lg:flex-row flex-col items-center justify-center gap-10 p-14'>
-        <div ref={contactBox} className=''><Link className='' to='/contact'><div className='  LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link></div>
-        <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link></div>
-     
-{/* /     <a href='#top'>back to top</a> */}
-     
       </footer>
-</div>
-
+    </div>
 
 
 
@@ -247,7 +177,7 @@ const skillsH1 =useRef(null)
     </div>
 
 
-  )
+</> )
 }
 
 
