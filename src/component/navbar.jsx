@@ -6,11 +6,11 @@ export default () => {
 
     function handleClick() {
 
-        
+
 
     }
 
-    function handleMenu(){
+    function handleMenu() {
 
 
 
@@ -41,11 +41,11 @@ export default () => {
 
 
 
-  <div onClick={handleMenu} class=" w-[30px] h-[20px]   md:hidden menu flex flex-col justify-between">
-    <div className="w-full h-[2px] bg-white"> <input className="bar " type="checkbox"></input>  </div>
-    <div className="w-full h-[2px] bg-white"> <input className="bar " type="checkbox"></input>  </div>
-    <div className="w-full h-[2px] bg-white"> <input className="bar " type="checkbox"></input>  </div>
-  </div> 
+            <div onClick={handleMenu} class=" w-[30px] h-[20px]   md:hidden menu flex flex-col justify-between">
+                <div className="w-full h-[2px] bg-white"> <input className="bar " type="checkbox"></input>  </div>
+                <div className="w-full h-[2px] bg-white"> <input className="bar " type="checkbox"></input>  </div>
+                <div className="w-full h-[2px] bg-white"> <input className="bar " type="checkbox"></input>  </div>
+            </div>
 
 
 

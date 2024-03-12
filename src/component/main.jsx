@@ -19,6 +19,7 @@ import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
 import { current } from 'tailwindcss/colors'
+
 export default () => {
 
 
@@ -67,7 +68,7 @@ export default () => {
       ease: Power3,
 
       rotate: 360,
-      duration: 10,
+      duration: 50,
 
 
       repeat: -1
@@ -82,27 +83,19 @@ export default () => {
 
 
 
-
-
-
-
-
-
   return (<>
+    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] bg-dot-white/[0.2]'  >
 
 
+      <div ref={nameRef} className=' w-full h-screen  flex flex-col justify-center items-center px-[1.5rem]'>
 
+        <div data-scroll data-scroll-direction='horizontal' className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
+          <Link to='/terminal'><div ref={bar} className=''><img className='w-[50px] lg:w-[80px]' src={orange} /></div></Link>
+          <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>
+        </div>
 
-    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit lg:h-fit  bg-[#19181B] bg-dot-white/[0.2]'  >
-
-
-
-      <div ref={nameRef} className=' w-full h-screen px-[1.5rem] py-[5rem] lg:py-[8rem]  flex flex-col justify-center items-center '>
-     
-        <div data-scroll data-scroll-direction='horizontal' className='flex gap-[1rem] justify-center items-center'> <div ref={bar} className=''><img className='w-[80px]' src={orange} /></div> <h1 className='name nameH1 text-[3rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1></div>
 
         <p className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
-
 
 
         <div ref={networks} data-scroll data-scroll-speed='.1' className='networks mt-[2rem] p-[1rem]'>
@@ -112,13 +105,17 @@ export default () => {
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.instagram.com/maihoonayush/" ><img className='socailImg' src={insta} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="#" ><img className='socailImg' src={mail} /></a>
           </div>
-
- </div>
-
+        </div>
 
 
 
-{/* 
+        <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p>
+
+
+
+      </div>
+
+  {/* 
 <div className='flex justify-center items-center'>
 <h3 className='text-[1.5rem]'>My tech stack : </h3>
 <img className='w-[40px]' src={htmllogo}/>
@@ -130,54 +127,27 @@ export default () => {
 </div> */}
 
 
-
-
-       
-        <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p>
-    
-      </div>
-
-
-
-
       <hr className='hrd' />
-
-
-
       <hr className='hrf' />
 
-      <div className=' bggra'>
-      <footer ref={scoialRef} className='footer w-full h-fit lg:h-[100vh]   flex flex-col items-center justify-center gap-10 p-14'>
+
+
+      <footer ref={scoialRef} className='footer w-full h-[100vh] bggra  flex flex-col items-center justify-center gap-10 p-14'>
 
         <div className='flex lg:flex-row flex-col gap-10 p-14'>
+
           <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg  LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link></div>
           <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link></div>
+
         </div>
-        {/* /     <a href='#top'>back to top</a> */}
+
         <p className='text-white'>© 2024 Ayush Srivastava</p>
 
       </footer>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </div>
-
-
-</> )
+  </>)
 }
 
 
