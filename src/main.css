@@ -479,3 +479,12 @@ z-index: 999999;
 color: #6d7071;
 
 }
+
+
+.tfont{
+
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+  
+}
