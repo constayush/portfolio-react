@@ -488,3 +488,8 @@ color: #6d7071;
     font-style: normal;
   
 }
+
+.tinput:focus{
+
+outline: 0;
+}

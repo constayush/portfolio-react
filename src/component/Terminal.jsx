@@ -12,6 +12,16 @@ function handleInputChange(e){
   console.log(e.target.value)
 
 }
+function handleKeyPress (e){
+
+
+
+  if(e.code == 'Enter'){
+
+
+
+  }
+}
 
 
 
@@ -33,11 +43,11 @@ function handleInputChange(e){
 
 
 <p> Welcome to termianl !</p>
+<div className='newCommand flex'><p>root@ayush:~#</p><input type='text' onKeyDown={handleKeyPress} onChange={handleInputChange} className='tinput w-full bg-transparent'/></div>
 
 
 
-
-         <input type='text' onChange={handleInputChange} className='w-full bg-transparent'></input>
+         
 
         </div>
 
