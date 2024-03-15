@@ -47,7 +47,7 @@ const containerRef = useRef(null)
                     smoothWheel: true,
                     smoothTouch: true,
                     wheelMultiplier: 1,
-                    touchMultiplier: .8,
+                    touchMultiplier: 1.5,
                     normalizeWheel: true,
                     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
                 },
