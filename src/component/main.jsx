@@ -84,7 +84,7 @@ export default () => {
 
 
   return (<>
-    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] bg-dot-white/[0.2]'  >
+    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] bg-dot-white/[.15]'  >
 
 
       <div ref={nameRef} className=' w-full h-screen  flex flex-col justify-center items-center px-[1.5rem]'>
@@ -103,7 +103,7 @@ export default () => {
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img className='socailImg' src={github} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img className='socailImg' src={linkedin} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.instagram.com/maihoonayush/" ><img className='socailImg' src={insta} /></a>
-            <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="#" ><img className='socailImg' src={mail} /></a>
+            <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="mailto:aayush@mail.com" ><img className='socailImg' src={mail} /></a>
           </div>
         </div>
 
