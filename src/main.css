@@ -121,7 +121,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing:.09rem ;
 
-  font-weight: 400;
+  font-weight: 500;
   color: #938b7b;
 }
 
@@ -219,7 +219,7 @@ color: #fe9400;
 .compH1 {
   font-family: 'Montserrat', sans-serif;
 
-  font-weight: 400;
+  font-weight: 500;
 
   color: #FFF3DD;
 
@@ -482,10 +482,10 @@ color: #6d7071;
 
 
 .tfont{
-
+/* 
     font-family: "VT323", monospace;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
   
 }
 

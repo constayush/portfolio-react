@@ -14,9 +14,9 @@ export default () => {
 
 const swiper = useRef(null)
 const ppara = useRef(null)
-
+const containerRef = useRef(null)
     useEffect(()=>{
-        gsap.from('.projectsH1',{
+        gsap.from(containerRef.current,{
 
             ease: Power3,
             y: 100,
@@ -56,7 +56,7 @@ const ppara = useRef(null)
 
     })
 
-    const containerRef = useRef(null)
+
 
   
     return (
@@ -65,7 +65,7 @@ const ppara = useRef(null)
 
             <h1 data-scroll data-scroll-speed='.2' className="projectsH1 text-[2rem] lg:text-[4rem] my-[5rem] lg:my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
 
-            <div data-scroll data-scroll-speed='.08' ref={ppara} className="projectParas  lg:leading-[2.5rem] w-[80%] lg:w-[55rem] flex flex-col justify-center items-center mt-4 overflow-hidden">
+            <div data-scroll data-scroll-speed='.1' ref={ppara} className="projectParas  lg:leading-[1.5rem] w-[80%] lg:w-[55rem] flex flex-col justify-center items-center mt-4 overflow-hidden">
 
 
                 <p  className="projectPara  mb-[1rem]">Step into the world of my projects, where creativity meets functionality! This is the place where I pour my heart and soul into turning ideas into reality. Explore a mix of projects that capture the essence of my journey—a journey filled with challenges, triumphs, and a lot of learning.</p>

@@ -89,16 +89,16 @@ export default () => {
 
       <div ref={nameRef} className=' w-full h-screen  flex flex-col justify-center items-center px-[1.5rem]'>
 
-        <div data-scroll data-scroll-direction='horizontal' className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
+        <div data-scroll data-scroll-speed='.08'  className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
           <Link to='/terminal'><div ref={bar} className=''><img className='w-[50px] lg:w-[80px]' src={orange} /></div></Link>
           <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>
         </div>
 
 
-        <p className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
+        <p data-scroll data-scroll-speed='.08' className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
 
 
-        <div ref={networks} data-scroll data-scroll-speed='.1' className='networks mt-[2rem] p-[1rem]'>
+        <div ref={networks} data-scroll data-scroll-speed='.2' className='networks mt-[2rem] p-[1rem]'>
           <div className='netbox rounded-lg w-[15rem] lg:w-[15rem]'>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img className='socailImg' src={github} /></a>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img className='socailImg' src={linkedin} /></a>
@@ -115,7 +115,7 @@ export default () => {
 
       </div>
 
-  {/* 
+      {/* 
 <div className='flex justify-center items-center'>
 <h3 className='text-[1.5rem]'>My tech stack : </h3>
 <img className='w-[40px]' src={htmllogo}/>
