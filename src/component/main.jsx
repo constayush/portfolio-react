@@ -10,7 +10,6 @@ import tslogo from "../../public/typescript.svg"
 import reactlogo from "../../public/react.svg"
 import gsaplogo from "../../public/gsap.svg"
 import tailwindlogo from "../../public/tailwind.svg"
-import { LampContainer } from './ui/lamp'
 import { useGSAP } from "@gsap/react";
 import { Link } from 'react-router-dom'
 import { useRef, useEffect } from 'react'
@@ -18,7 +17,6 @@ import gsap from 'gsap'
 import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
-import { current } from 'tailwindcss/colors'
 
 export default () => {
 
@@ -84,10 +82,12 @@ export default () => {
 
 
   return (<>
-    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] bg-dot-white/[.15]'  >
+    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] bg-dot-white/[.1]'  >
 
 
       <div ref={nameRef} className=' w-full h-screen  flex flex-col justify-center items-center px-[1.5rem]'>
+
+
 
         <div data-scroll data-scroll-speed='.08'  className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
           <Link to='/terminal'><div ref={bar} className=''><img className='w-[50px] lg:w-[80px]' src={orange} /></div></Link>
@@ -127,7 +127,7 @@ export default () => {
 </div> */}
 
 
-      <hr className='hrf' />
+<hr className='w-full h-[.1px] border-[#4a4a4a] border-dashed border-[2px] '/>
 
 
 
@@ -135,8 +135,8 @@ export default () => {
 
         <div className='flex lg:flex-row flex-col gap-10 p-14'>
 
-          <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg  LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1'>contact</div></Link></div>
-          <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1'>projects</div></Link></div>
+          <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1           hover:bg-grid-black/[.1] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
+          <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1 hover:bg-grid-black/[.1] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
 
         </div>
 

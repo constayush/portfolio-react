@@ -111,10 +111,17 @@ body {
 
 }
 .myr{
+  cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-
+transition: all .3s ease;
   font-weight: 600;
   color: rgba(255, 191, 71, 0.936);
+}
+
+.myr:hover{
+  color: rgba(255, 154, 71, 0.936);
+transform: scale(1.01);
+
 }
 .subH1 {
 
@@ -481,13 +488,7 @@ color: #6d7071;
 }
 
 
-.tfont{
-/* 
-    font-family: "VT323", monospace;
-    font-weight: 400;
-    font-style: normal; */
-  
-}
+
 
 .tinput:focus{
 
