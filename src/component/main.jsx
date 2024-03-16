@@ -82,16 +82,16 @@ export default () => {
 
 
   return (<>
-    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] bg-dot-white/[.1]'  >
+    <div ref={containerRef} id='top' className=' smooth-scroll w-full h-fit  top-[5rem]  bg-[#19181B] '  >
 
 
-      <div ref={nameRef} className=' w-full h-screen  flex flex-col justify-center items-center px-[1.5rem]'>
+      <div ref={nameRef} className=' w-full h-screen  flex flex-col justify-center items-center px-[1.5rem] bg-dot-white/[.1]'>
 
 
 
-        <div data-scroll data-scroll-speed='.08'  className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
-          <Link to='/terminal'><div ref={bar} className=''><img className='w-[50px] lg:w-[80px]' src={orange} /></div></Link>
-          <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>
+        <div data-scroll data-scroll-speed='.08' className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
+          <Link to='/terminal'><div ref={bar} className=''><img className='hidden lg:block w-[80px]' src={orange} /></div></Link>
+          <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>     
         </div>
 
 
@@ -109,41 +109,47 @@ export default () => {
 
 
 
-        <p className='myr   text-[.8rem] lg:text-[1rem]   mt-[2rem]'>My Resume (pdf 108kb)</p>
+        <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[2rem] mt-[2rem]'>My Resume (pdf 108kb)</p>
 
-
+        <Link  to='/terminal'><div ref={bar} className=''><img className='lg:hidden  w-[80px]' src={orange} /></div></Link>
 
       </div>
 
-      {/* 
-<div className='flex justify-center items-center'>
-<h3 className='text-[1.5rem]'>My tech stack : </h3>
-<img className='w-[40px]' src={htmllogo}/>
-<img className='w-[40px]' src={csslogo}/>
-<img className='w-[40px]' src={jslogo}/>
-<img className='w-[40px]' src={tslogo}/>
-<img className='w-[40px]' src={tailwindlogo}/>
-<img className='w-[40px]' src={reactlogo}/>
-</div> */}
-
-
-<hr className='w-full h-[.1px] border-[#4a4a4a] border-dashed border-[2px] '/>
 
 
 
-      <footer ref={scoialRef} className='footer w-full h-[100vh] bggra  flex flex-col items-center justify-center gap-10 p-14'>
+      <hr className='w-full h-[.1px] border-[#4a4a4a] border-dashed border-[2px] ' />
 
-        <div className='flex lg:flex-row flex-col gap-10 p-14'>
+      <div className='bggra'>
 
-          <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1           hover:bg-grid-black/[.1] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
-          <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1 hover:bg-grid-black/[.1] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
+        <div className='w-full h-screen center flex-col'>
+
+
+          <h1 data-scroll data-scroll-speed='.03' className="projectsH1 text-[2rem] lg:text-[3rem] my-[5rem] lg:my-[3rem]">About me<span className="text-[#ffbe47]">.</span></h1>
+          <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>Hey, I'm Ayush, an 18-year-old web developer fueled by curiosity and a love for coding. I'm all about turning ideas into digital reality and constantly seeking new challenges to tackle.</p>
+          <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'> When I'm not coding, you'll find me exploring coffee shops, strumming on my guitar or you'll often catch me playing Valorant, Counter-Strike 2, or diving into the blocky adventures of Minecraft.</p>
+          <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>currently pursuing a diploma in Computer Science Engineering at Invertis University. Alongside my studies, I'm immersing myself in mastering the MERN stack <span className='text-[#ffe3b5c0]'>(MongoDB, Express.js, React, Node.js)</span></p>
+
+          <hr data-scroll data-scroll-speed='.01' className=' w-[80%] md:w-[60%] mt-[3rem] h-[.1px] border-[#4a4a4a] border-solid border-[2px] ' />
+
 
         </div>
 
-        <p className='text-white'>© 2024 Ayush Srivastava</p>
 
-      </footer>
 
+        <footer ref={scoialRef} className='footer w-full h-[100vh]   flex flex-col items-center justify-center gap-10 p-14'>
+
+          <div className='flex lg:flex-row flex-col gap-10 p-14'>
+
+            <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1           hover:bg-grid-black/[.1] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
+            <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1 hover:bg-grid-black/[.1] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
+
+          </div>
+
+          <p className='text-white'>© 2024 Ayush Srivastava</p>
+
+        </footer>
+      </div>
 
     </div>
   </>)
