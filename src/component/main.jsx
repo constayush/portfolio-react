@@ -27,6 +27,7 @@ export default () => {
   const projectBox = useRef(null)
   const contactBox = useRef(null)
   const bar = useRef(null)
+  const bar2 = useRef(null)
   const para = useRef(null)
   const networks = useRef(null)
   const skillsH1 = useRef(null)
@@ -60,7 +61,6 @@ export default () => {
     })
 
 
-
     let barAnimation = gsap.from(bar.current, {
 
       ease: Power3,
@@ -73,7 +73,17 @@ export default () => {
 
     })
 
+    let barAnimation2 = gsap.from(bar2.current, {
 
+      ease: Power3,
+
+      rotate: 360,
+      duration: 50,
+
+
+      repeat: -1
+
+    })
 
 
   })
@@ -111,7 +121,7 @@ export default () => {
 
         <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[2rem] mt-[2rem]'>My Resume (pdf 108kb)</p>
 
-        <Link  to='/terminal'><div ref={bar} className=''><img className='lg:hidden  w-[80px]' src={orange} /></div></Link>
+        <Link  to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px]' src={orange} /></div></Link>
 
       </div>
 
@@ -126,7 +136,7 @@ export default () => {
 
 
           <h1 data-scroll data-scroll-speed='.03' className="projectsH1 text-[2rem] lg:text-[3rem] my-[5rem] lg:my-[3rem]">About me<span className="text-[#ffbe47]">.</span></h1>
-          <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>Hey, I'm Ayush, an 18-year-old web developer fueled by curiosity and a love for coding. I'm all about turning ideas into digital reality and constantly seeking new challenges to tackle.</p>
+          <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>Hey, I'm Ayush, an 18-year-old web developer fueled by curiosity and passionate about building ui interfaces. I'm all about turning ideas into digital reality and constantly seeking new challenges to tackle.</p>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'> When I'm not coding, you'll find me exploring coffee shops, strumming on my guitar or you'll often catch me playing Valorant, Counter-Strike 2, or diving into the blocky adventures of Minecraft.</p>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>currently pursuing a diploma in Computer Science Engineering at Invertis University. Alongside my studies, I'm immersing myself in mastering the MERN stack <span className='text-[#ffe3b5c0]'>(MongoDB, Express.js, React, Node.js)</span></p>
 

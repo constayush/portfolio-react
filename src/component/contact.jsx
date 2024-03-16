@@ -8,7 +8,7 @@ function Contact() {
 
 useEffect(()=>{
 
-  gsap.from('.letsMakeH1',{
+  gsap.from(containerRef.current,{
 
     ease: Power3,
     y: 100,
