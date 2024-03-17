@@ -78,7 +78,7 @@ function Terminal() {
 
         </nav>
 
-        <div className='w-full h-[90%] bg-[#151515] rounded text-white tfont'>
+        <div className='w-full h-[90%] bg-[#151515] rounded text-white tfont overflow-auto'>
 
 
           <p> Welcome to termianl !</p>

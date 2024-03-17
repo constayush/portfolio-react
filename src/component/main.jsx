@@ -3,13 +3,6 @@ import linkedin from '../../public/linked-in.svg'
 import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
 import orange from "../../public/orange.svg"
-import htmllogo from "../../public/html.svg"
-import csslogo from "../../public/css.svg"
-import jslogo from "../../public/javascript.svg"
-import tslogo from "../../public/typescript.svg"
-import reactlogo from "../../public/react.svg"
-import gsaplogo from "../../public/gsap.svg"
-import tailwindlogo from "../../public/tailwind.svg"
 import { useGSAP } from "@gsap/react";
 import { Link } from 'react-router-dom'
 import { useRef, useEffect } from 'react'
@@ -17,7 +10,7 @@ import gsap from 'gsap'
 import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
-
+import { TypewriterEffectSmooth } from './ui/typewriter'
 export default () => {
 
 
@@ -32,7 +25,33 @@ export default () => {
   const networks = useRef(null)
   const skillsH1 = useRef(null)
 
-
+const words= [
+  {
+    text: "Click",
+  },
+  {
+    text: "on",
+  },
+  {
+    text: "the",
+  },
+  {
+    text: "orange",  
+    className: "text-orange-500 dark:text-blue-500",
+  },
+  {
+    text: "to",
+  
+  },
+  {
+    text: "switch",
+    
+  },
+  {
+    text: "realms",
+   
+  },
+];
 
   useGSAP(() => {
     const locomotive = new LocomotiveScroll({
@@ -106,8 +125,7 @@ export default () => {
 
 
         <p data-scroll data-scroll-speed='.08' className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
-
-
+      
         <div ref={networks} data-scroll data-scroll-speed='.2' className='networks mt-[2rem] p-[1rem]'>
           <div className='netbox rounded-lg w-[15rem] lg:w-[15rem]'>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img className='socailImg' src={github} /></a>
@@ -118,9 +136,10 @@ export default () => {
         </div>
 
 
-
-        <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[2rem] mt-[2rem]'>My Resume (pdf 108kb)</p>
-
+{/* 
+        <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[1rem] mt-[2rem]'>My Resume (pdf 108kb)</p> */}
+        <p className='subH1 subm  text-[1.5rem] lg:text-[1rem] mt-[2rem]'>"Click on the <span className='greeting'><Link to='/terminal'>orange</Link></span> to switch realms"</p> 
+{/* <TypewriterEffectSmooth className='subH1 subm  text-[1.5rem] lg:text-[1rem]' words={words}/> */}
         <Link  to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px]' src={orange} /></div></Link>
 
       </div>
@@ -133,7 +152,7 @@ export default () => {
       <div className='bggra'>
 
         <div className='w-full h-screen center flex-col'>
-
+      
 
           <h1 data-scroll data-scroll-speed='.03' className="projectsH1 text-[2rem] lg:text-[3rem] my-[5rem] lg:my-[3rem]">About me<span className="text-[#ffbe47]">.</span></h1>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>Hey, I'm Ayush, an 18-year-old web developer fueled by curiosity and passionate about building ui interfaces. I'm all about turning ideas into digital reality and constantly seeking new challenges to tackle.</p>

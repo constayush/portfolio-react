@@ -7,6 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import LocomotiveScroll from 'locomotive-scroll';
+
 gsap.registerPlugin(ScrollTrigger)
 
 

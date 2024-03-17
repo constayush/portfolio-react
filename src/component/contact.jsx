@@ -3,6 +3,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { useRef, useEffect } from 'react'
 import {gsap, Power3} from 'gsap/dist/gsap'
 import '../../src/locomotive-scroll.css'
+
 function Contact() {
   const containerRef = useRef(null)
 
@@ -43,9 +44,8 @@ opacity: 0
    
       <div ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
 
-
         <div className='conElems  conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'>
-        <h1 data-scroll data-scroll-speed='.2' className='letsMakeH1'>Let's make<br />something great<span className='greeting'>!</span></h1>
+        <h1  className='letsMakeH1'>Let's make<br />something great<span className='greeting'>!</span></h1>
         </div>
 
 
