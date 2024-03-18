@@ -16,6 +16,13 @@ export default () => {
 const swiper = useRef(null)
 const ppara = useRef(null)
 const containerRef = useRef(null)
+
+
+
+
+
+
+
     useEffect(()=>{
         gsap.from(containerRef.current,{
 

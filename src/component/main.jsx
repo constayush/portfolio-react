@@ -4,13 +4,15 @@ import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
 import orange from "../../public/orange.svg"
 import { useGSAP } from "@gsap/react";
-import { Link } from 'react-router-dom'
+import { Link , } from 'react-router-dom'
+
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
-import { TypewriterEffectSmooth } from './ui/typewriter'
+
+
 export default () => {
 
 
@@ -24,6 +26,12 @@ export default () => {
   const para = useRef(null)
   const networks = useRef(null)
   const skillsH1 = useRef(null)
+
+
+
+  const scrollToTopAndNavigate = () => {
+
+  };
 
 const words= [
   {
@@ -166,12 +174,12 @@ const words= [
 
 
 
-        <footer ref={scoialRef} className='footer w-full h-[100vh]   flex flex-col items-center justify-center gap-10 p-14'>
+        <footer ref={scoialRef} className='footer w-full h-[100vh] bg-grid-white/[.03]  flex flex-col items-center justify-center gap-10 p-14'>
 
           <div className='flex lg:flex-row flex-col gap-10 p-14'>
 
-            <div ref={contactBox} className=''><Link className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1           hover:bg-grid-black/[.1] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
-            <div ref={projectBox} className='projectBox'><Link className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1 hover:bg-grid-black/[.1] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
+            <div ref={contactBox} className=''><Link onClick={scrollToTopAndNavigate} className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1           hover:bg-grid-small-black/[.5] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
+            <div ref={projectBox} className='projectBox'><Link onClick={scrollToTopAndNavigate} className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1 hover:bg-grid-small-black/[.5] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
 
           </div>
 

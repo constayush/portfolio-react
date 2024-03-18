@@ -7,6 +7,9 @@ import '../../src/locomotive-scroll.css'
 function Contact() {
   const containerRef = useRef(null)
 
+
+
+  
 useEffect(()=>{
 
   gsap.from(containerRef.current,{
@@ -46,6 +49,7 @@ opacity: 0
 
         <div className='conElems  conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'>
         <h1  className='letsMakeH1'>Let's make<br />something great<span className='greeting'>!</span></h1>
+
         </div>
 
 
