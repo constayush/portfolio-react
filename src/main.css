@@ -507,3 +507,7 @@ outline: 0;
   font-weight: 400;
   font-style: normal;
 }
+
+.linkCL{
+  transition: all .4s ease;
+}

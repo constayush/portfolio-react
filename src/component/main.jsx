@@ -5,7 +5,6 @@ import mail from '../../public/mail.svg'
 import orange from "../../public/orange.svg"
 import { useGSAP } from "@gsap/react";
 import { Link , } from 'react-router-dom'
-
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { Power3, } from 'gsap'

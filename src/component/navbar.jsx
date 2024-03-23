@@ -7,6 +7,7 @@ export default () => {
     const link1 = useRef(null)
     const link2 = useRef(null)
     const link3 = useRef(null)
+    const linkCon = useRef(null)
     const nav = useRef(null)
     const navUnClickedUi = useRef(null)
     const navClickedUi = useRef(null)
@@ -26,12 +27,12 @@ gsap.from(link1.current , {
 
     
     y: -100,
-    duration:1,
+    duration:.5,
 opacity: 0
 })
 
 
-}, [counter])
+})
 
 
 
@@ -51,29 +52,42 @@ opacity: 0
     }
 
     function handleMenu() {
+
+        gsap.from([link1.current ,link2.current,link3.current] , {
+
+    
+            y: -100,
+            duration:.5,
+            stagger: .1,
+        opacity: 0
+        })
+
+
+
 counter++
-       
+   
         if (isNavClicked) { // when not clicked
             isNavClicked = false
-
+linkCon.current.style.opacity = 0
             navUnClickedUi.current.style.display = "flex"
-            navClickedUi.current.style.display = "none"
-
+          
+            
 
             nav.current.style.height = '3rem'
-
+  navClickedUi.current.style.display = "none"
         }
 
         else {// when  clicked
-
-            navUnClickedUi.current.style.display = "none"
+   linkCon.current.style.opacity = 1
+            
             navClickedUi.current.style.display = "flex"
 
-
+         
             isNavClicked = true
             console.log(nav.current.style)
-            nav.current.style.backgroundColor = `#19181bf1`
+            // nav.current.style.backgroundColor = `#19181bf1`
             nav.current.style.height = '100vh'
+            navUnClickedUi.current.style.display = "none"
         }
 
 
@@ -118,7 +132,7 @@ counter++
 
             </div>
 
-            <div ref={navClickedUi} className="w-full h-full bg-[#7473750b] hidden justify-center items-start">
+            <div ref={navClickedUi} className="w-full h-full bg-[#7473750b]  bg-grid-white/[.05] hidden justify-center items-start">
 
 
                 <div className="center flex-col w-full">
@@ -138,7 +152,7 @@ counter++
                     </div>
 
 
-                    <ul className=" center flex-col ">
+                    <ul ref={linkCon} className="linkCL center flex-col opacity-[0] ">
 
 
                         <li ref={link1} onClick={handleClick}><NavLink to="/" className="       fatfont     navLink m-2 text-[5rem] lg:text-[1.25rem]">About</NavLink></li>
