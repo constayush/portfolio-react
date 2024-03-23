@@ -18,12 +18,17 @@ const ppara = useRef(null)
 const containerRef = useRef(null)
 
 
-
+        scrollTo(0,0)
 
 
 
 
     useEffect(()=>{
+    
+
+
+
+
         gsap.from(containerRef.current,{
 
             ease: Power3,
@@ -78,11 +83,10 @@ const containerRef = useRef(null)
 
                 <p  className="projectPara  mb-[1rem]">Step into the world of my projects, where creativity meets functionality! This is the place where I pour my heart and soul into turning ideas into reality. Explore a mix of projects that capture the essence of my journey—a journey filled with challenges, triumphs, and a lot of learning.</p>
                 <p  className="projectPara  mb-[1rem]">Think of it as a collection of digital stories that reflect not just my technical skills, but also the joy I find in crafting beautiful and user-centric designs.</p>
-                <p  className="projectPara  mb-[4rem]">Whether it's cracking the code for efficiency, weaving together seamless user interfaces, or diving into the latest tech trends, these projects are my way of showing you the human side of technology.</p>
-
+                
             </div>
 
-            <div className="majorProjects flex flex-col md:flex-row justify-center items-center overflow-hidden gap-4 lg:gap-0">
+            <div className="majorProjects flex flex-col md:flex-row justify-center items-center overflow-hidden gap-4 lg:gap-0 lg:mt-[3rem]">
                 <div className="flex flex-col gap-4 lg:gap-0 firstSec">
                     <LongComp  name='Project' description=' uploading soon... I have homework to do :('  link = 'https:/github.com/constayush'/>
                     <SmallComp  name='Project' description=' uploading soon... I have homework to do :(' link = 'https:/github.com/constayush'/>
