@@ -12,7 +12,12 @@ body {
   /* scroll-snap-points-y: repeat(100vh); */
   /* scroll-snap-type: y mandatory; */
 }
-
+.navbar{
+  transition: all .3s ease;
+  background-repeat: no-repeat;
+backdrop-filter: blur(8px);
+  background-size: cover;
+}
 .mainWrap {
   background-color: #19181B;
 }

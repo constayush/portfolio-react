@@ -146,7 +146,7 @@ const words= [
 
 {/* 
         <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[1rem] mt-[2rem]'>My Resume (pdf 108kb)</p> */}
-        <p className='subH1 subm  text-[1.5rem] lg:text-[1rem] mt-[2rem]'>"Click on the <span className='greeting'><Link to='/terminal'>orange</Link></span> to switch realms"</p> 
+        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]'>"Click on the <span className='greeting'><Link to='/terminal'>orange</Link></span> to switch realms"</p> 
 {/* <TypewriterEffectSmooth className='subH1 subm  text-[1.5rem] lg:text-[1rem]' words={words}/> */}
         <Link  to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px]' src={orange} /></div></Link>
 
@@ -159,10 +159,12 @@ const words= [
 
       <div className='bggra'>
 
+   
+
         <div className='w-full h-screen center flex-col'>
       
 
-          <h1 data-scroll data-scroll-speed='.03' className="projectsH1 text-[2rem] lg:text-[3rem] my-[5rem] lg:my-[3rem]">About me<span className="text-[#ffbe47]">.</span></h1>
+          <h1 data-scroll data-scroll-speed='.03' className="projectsH1 text-[2rem] lg:text-[3rem] my-[5rem]  lg:my-[3rem]">About me<span className="text-[#ffbe47]">.</span></h1>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>Hey, I'm Ayush, an 18-year-old web developer fueled by curiosity and passionate about building ui interfaces. I'm all about turning ideas into digital reality and constantly seeking new challenges to tackle.</p>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'> When I'm not coding, you'll find me exploring coffee shops, strumming on my guitar or you'll often catch me playing Valorant, Counter-Strike 2, or diving into the blocky adventures of Minecraft.</p>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>currently pursuing a diploma in Computer Science Engineering at Invertis University. Alongside my studies, I'm immersing myself in mastering the MERN stack <span className='text-[#ffe3b5c0]'>(MongoDB, Express.js, React, Node.js)</span></p>
