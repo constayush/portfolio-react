@@ -74,7 +74,7 @@ const containerRef = useRef(null)
   
     return (
        
-       <div  ref={containerRef} className="w-[98vw] h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
+       <div  ref={containerRef} className="w-full h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
 
             <h1 data-scroll data-scroll-speed='.2' className="projectsH1 text-[2rem] lg:text-[4rem] my-[5rem] lg:my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
 
@@ -86,7 +86,7 @@ const containerRef = useRef(null)
                 
             </div>
 
-            <div className="majorProjects flex flex-col md:flex-row justify-center items-center overflow-hidden gap-4 lg:gap-0 lg:mt-[3rem]">
+            <div className="majorProjects flex flex-col md:flex-row justify-center items-center overflow-hidden gap-4 lg:gap-0 mt-[4rem]">
                 <div className="flex flex-col gap-4 lg:gap-0 firstSec">
                     <LongComp  name='Project' description=' uploading soon... I have homework to do :('  link = 'https:/github.com/constayush'/>
                     <SmallComp  name='Project' description=' uploading soon... I have homework to do :(' link = 'https:/github.com/constayush'/>

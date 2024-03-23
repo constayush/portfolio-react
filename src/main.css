@@ -13,7 +13,7 @@ body {
   /* scroll-snap-type: y mandatory; */
 }
 .navbar{
-  transition: all .3s ease;
+  transition: all .75s ease;
   background-repeat: no-repeat;
 backdrop-filter: blur(8px);
   background-size: cover;
@@ -500,3 +500,10 @@ color: #6d7071;
 outline: 0;
 }
 
+.fatfont {
+
+  transition: all .4s ease;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
