@@ -40,7 +40,7 @@ else if(e.code == 'Enter') {
 
 
   return (
-    <div className='w-full h-screen center flex-col p-[1rem] '>
+    <div className='w-full h-screen center flex-col p-[1rem] overflow-hidden '>
 
 
 
