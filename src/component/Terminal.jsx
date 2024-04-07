@@ -1,70 +1,32 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react'
-
+import { Link } from 'react-router-dom'
 function Terminal() {
 
 
-  let [commandCounterArr, setCommandCounterArr] = useState([])
-  let [commandOutputCounterArr, setCommandOutputCounterArr] = useState([])
-  let [inputData, setInputData] = useState()
-  let [outputData, setOutputData] = useState()
-  const commandInput = useRef(null)
-  const commands = ['whoami', 'projects', 'contact']
+  let [prvInputsData, setPrvInputsData] = useState([]) // array to store all input data.
+  let [inputData, setInputData] = useState()// to store current input data.
+  const commandInput = useRef(null) //input div ref
+  const commands = ['whoami', 'projects', 'contact'] // array of commands
 
 
-  function handleInputChange(e) { setInputData(e.target.value); }
+
+  function handleInputChange(e) { setInputData(e.target.value); } //setting value of input
 
 
   function handleKeyPress(e) {
 
-    if (e.code == 'Enter') {
-
-      console.log(inputData , commandInput.current.value , "here")
-      // handleCommands(inputData);
-  
-
-      setCommandCounterArr([...commandCounterArr, inputData]);
+    if (e.code == 'Enter' && commandInput.current.value ) {  // checking both condition if key is enter and input have some value in it. 
 
 
-      commandInput.current.value= ""
-      
-      console.log(inputData , commandInput.current.value , "here")
+
+        setPrvInputsData([...prvInputsData, inputData]); // updating array of input data
+        commandInput.current.value = null // setting input value to null
+
+
+
     }
   }
-
-  function handleCommands(data) {
-
-    if (commands.includes(data)) {
-      if (data === 'whoami') {
-
-        setOutputData("Hi, my name is Ayush. I'm a developer hailing from India.")
-  
-      }
-      if (data === 'projects') {
-
-        setOutputData("Hi, my name is Ayush. I'm a developer hailing from India.")
-     
-      }
-      if (data === 'contact') {
-
-        setOutputData("Hi, my name is Ayush. I'm a developer hailing from India.")
-     
-      }
-
-    }
-
-    else {
-
-      setOutputData("invalid command!");
-    }
-
-  }
-
-
-
-
-
-
 
 
   return (
@@ -74,7 +36,7 @@ function Terminal() {
 
         <nav className='w-full h-[8%] text-white bg-[#1b1b1b] flex items-center justify-between p-[2rem] '>
 
-          <div className=''>logo</div> <div className=''>terminal</div> <div>logos</div>
+          <h1 className=" text-xl "><a href="/">As.</a></h1> <div className='text-xl '>terminal</div> <Link to='/'><div className='text-xl '>back</div></Link>
 
         </nav>
 
@@ -84,8 +46,8 @@ function Terminal() {
           <p> Welcome to termianl !</p>
 
 
-          {commandCounterArr.map((data) => <div className='oldCommand  flex'><p>root@ayush:~#</p><p>{data}</p></div>)}
-          {commandOutputCounterArr.map(() => <div className='oldCommand  flex'><p>root@ayush:~#</p><p>{outputData}</p></div>)}
+          {prvInputsData.map((data) => <div className='oldCommand  flex'><p>root@ayush:~#</p><p>{data}</p></div>)}
+
 
           <div className='newCommand flex'>
 
