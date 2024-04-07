@@ -68,17 +68,17 @@ function Terminal() {
 
 
   return (
-    <div className='w-full h-screen center flex-col '>
+    <div className='w-full h-screen center flex-col p-[1rem] '>
 
-      <div className='termianl  w-[20rem] h-[20rem] lg:w-[70rem] lg:h-[40rem]   md:w-[45rem] md:h-[30rem]  '>
+      <div className='termianl  w-full h-full    '>
 
-        <nav className='w-full h-[8%] bg-[#1b1b1b] flex items-center justify-between p-[2rem] '>
+        <nav className='w-full h-[8%] text-white bg-[#1b1b1b] flex items-center justify-between p-[2rem] '>
 
           <div className=''>logo</div> <div className=''>terminal</div> <div>logos</div>
 
         </nav>
 
-        <div className='w-full h-[90%] bg-[#151515] rounded text-white tfont overflow-auto'>
+        <div className='w-full p-[1rem] h-[90%] bg-[#151515] rounded text-white tfont overflow-auto'>
 
 
           <p> Welcome to termianl !</p>
