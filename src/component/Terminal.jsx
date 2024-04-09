@@ -1,14 +1,59 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap/gsap-core'
+import { Power3 } from 'gsap'
 function Terminal() {
 
-
+const terminal = useRef(null)
+const loader = useRef(null)
   let [prvInputsData, setPrvInputsData] = useState([]) // array to store all input data.
   let [commandOutputData, setcommandOutputData] = useState([])// array to store all commands output data.
   let [inputData, setInputData] = useState()// to store current input data.
   const input = useRef(null) //input div refSSSS
   const commandsArr = ['whoami', 'projects', 'contact'] // array of commands
+
+
+
+
+
+/* .. ...........................................ANIMATIONS..................................................*/
+
+
+
+
+
+
+useGSAP(()=>{
+
+
+
+  let heading = gsap.from(terminal.current, {
+    ease: Power3,
+   width: 0 ,
+    duration: .6,
+    opacity: 0
+
+  })
+
+
+
+})
+
+
+
+
+
+
+
+
+
+/* .. ...........................................ANIMATIONS End..................................................*/
+
+
+
+
 
 
 
@@ -22,9 +67,11 @@ function Terminal() {
       if (commandsArr.includes(input.current.value)) {
 
         if (input.current.value == 'whoami') {
-          setPrvInputsData([...prvInputsData, inputData]); // updating array of input data
+       
           input.current.value = null // setting input value to null
-          setcommandOutputData([...commandOutputData, "ayush"])
+       
+         setPrvInputsData([...prvInputsData, "haan"])
+           setPrvInputsData([...prvInputsData, "whoami"])
         }
 
       }
@@ -50,11 +97,12 @@ function Terminal() {
 
 
   return (
-    <div className='w-full h-screen center flex-col p-[1rem] overflow-hidden '>
+    <div className='w-full h-screen center flex-col p-[1rem] overflow-hidden  '>
 
 
 
-      <div className='termianl  w-full h-full    '>
+
+      <div ref={terminal} className='termianl  w-full h-full   '>
 
 
 
@@ -67,16 +115,16 @@ function Terminal() {
         </nav>
 
 
-
-        <div className='w-full p-[1rem] h-[90%] overflow-auto bg-[#151515] rounded text-white tfont '>
+       
+        <div   className='w-full p-[1rem] h-[90%] overflow-auto bg-[#151515] rounded text-white tfont '>
 
 
           <p> Welcome to termianl !</p>
 
-
           {prvInputsData.map((data) => <div className='oldCommand  flex'><p>root@ayush:~#</p><p>{data}</p></div>)}
-          {commandOutputData.map((data) => <div className='oldCommand  flex'><p>root@ayush:~#</p><p>{data}</p></div>)}
+          
 
+          {/* {commandOutputData.map((data) => <div className='oldCommand  flex'><p>root@ayush:~#</p><p>{data}</p></div>)} */}
 
           <div className='newCommand flex'>
 
