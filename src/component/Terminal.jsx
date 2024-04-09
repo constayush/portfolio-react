@@ -97,7 +97,7 @@ useGSAP(()=>{
 
 
   return (
-    <div className='w-full h-screen center flex-col p-[1rem] overflow-hidden  '>
+    <div className='w-full lg:h-[100vh] h-[95vh] center flex-col p-[1rem] overflow-hidden  '>
 
 
 
@@ -106,7 +106,7 @@ useGSAP(()=>{
 
 
 
-        <nav className='w-full  h-[8%] text-white bg-[#1b1b1b] flex items-center justify-between p-[2rem] '>
+        <nav className='w-full  h-[8%] text-white bg-[#141414] flex items-center justify-between p-[2rem] '>
 
 
           <h1 className=" text-xl "><a href="/">As.</a></h1> <div className='text-xl '>terminal</div> <Link to='/'><div className='text-xl '>back</div></Link>
@@ -116,7 +116,7 @@ useGSAP(()=>{
 
 
        
-        <div   className='w-full p-[1rem] h-[90%] overflow-auto bg-[#151515] rounded text-white tfont '>
+        <div   className='w-full p-[1rem] h-[90%] overflow-auto bg-[#070707] rounded text-white tfont '>
 
 
           <p> Welcome to termianl !</p>
