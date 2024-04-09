@@ -97,7 +97,7 @@ useGSAP(()=>{
 
 
   return (
-    <div className='w-full lg:h-[100vh] h-[95vh] center flex-col p-[1rem] overflow-hidden  '>
+    <div className='w-full lg:h-[100vh] h-[95vh] center flex-col p-[1rem] overflow-auto  '>
 
 
 

@@ -179,9 +179,9 @@ const words= [
 
           <div className='flex lg:flex-row flex-col gap-10 p-14'>
 
-            <div ref={contactBox} className=''><Link onClick={scrollToTopAndNavigate} className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center  subH1           hover:bg-grid-small-black/[.5] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
-            <div ref={projectBox} className='projectBox'><Link onClick={scrollToTopAndNavigate} className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[14rem]  bg-[#FFF3DD] flex items-center justify-center subH1 hover:bg-grid-small-black/[.5] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
-
+            <div ref={contactBox} className=''><Link onClick={scrollToTopAndNavigate} className='' to='/contact'><div className=' rounded-lg footbg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[9rem]  bg-[#FFF3DD] flex items-center justify-center             hover:bg-grid-small-black/[.5] hover:text-[1.4rem] '           >         <div className='foothide w-full h-full center'>contact</div> </div></Link></div>
+            <div ref={projectBox} className='projectBox'><Link onClick={scrollToTopAndNavigate} className='' to='/projects'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[9rem]  bg-[#FFF3DD] flex items-center justify-center  hover:bg-grid-small-black/[.5] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>projects </div></div></Link></div>
+            <div ref={projectBox} className='terminalBox'><Link onClick={scrollToTopAndNavigate} className='' to='/terminal'><div className=' footbg rounded-lg LINKTO lg:w-[20rem] lg:h-[20rem] w-[14rem] h-[9rem]  bg-[#FFF3DD] flex items-center justify-center hover:bg-grid-small-black/[.5] hover:text-[1.4rem] ' ><div className='foothide w-full h-full center'>termianl </div></div></Link></div>
           </div>
 
           <p className='text-white'>© 2024 Ayush Srivastava</p>

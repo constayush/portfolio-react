@@ -139,7 +139,13 @@ transform: scale(1.01);
 
 
 
-
+.footbg{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing:.09rem ;
+font-size: 1.1rem;
+  font-weight: 500;
+  color: #160e00;
+}
 
 
 
