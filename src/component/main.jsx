@@ -10,7 +10,7 @@ import gsap from 'gsap'
 import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
-
+import styles from 'doodle.css/doodle.css'
 
 export default () => {
 
@@ -145,7 +145,7 @@ const words= [
 
 {/* 
         <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[1rem] mt-[2rem]'>My Resume (pdf 108kb)</p> */}
-        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]'>"Click on the <span className='greeting'><Link to='/terminal' className='underline'>orange</Link></span> to switch realms"</p> 
+        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]  fieldset'>"Click on the <span className='greeting doodle-border'><Link to='/terminal' className=''>orange</Link></span> to switch realms"</p> 
 {/* <TypewriterEffectSmooth className='subH1 subm  text-[1.5rem] lg:text-[1rem]' words={words}/> */}
         <Link  to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px] ' src={orange} /></div></Link>
 
