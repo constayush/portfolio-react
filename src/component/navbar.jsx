@@ -98,7 +98,7 @@ linkCon.current.style.opacity = 0
     return (
 
 
-        <nav ref={nav} className=" navbar fixed  z-[9]  w-[100vw] h-[3rem] lg:h-[6rem] bg-[#19181B] center">
+        <nav ref={nav} className=" navbar fixed  z-[9]  w-[100vw] h-[3rem] lg:h-[6rem] bg-[#19181bdc] center bg-blur-md">
 
             <div ref={navUnClickedUi} className="flex w-full justify-between items-center  p-[2rem]">
 

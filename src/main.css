@@ -459,6 +459,11 @@ align-items: center;
   z-index: -1;
 } */
 
+.bggra2{
+  background: rgb(25,24,27);
+  background: linear-gradient(153deg, rgba(10,10,10,1) 0%, rgba(25,24,27,1) 96%);
+
+}
 
 .bggra{background: rgb(25,24,27);
   background: linear-gradient(153deg, rgba(25,24,27,1) 0%, rgba(10,10,10,1) 96%);

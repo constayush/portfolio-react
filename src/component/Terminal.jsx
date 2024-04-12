@@ -70,8 +70,9 @@ useGSAP(()=>{
        
           input.current.value = null // setting input value to null
        
-         setPrvInputsData([...prvInputsData, "haan"])
-           setPrvInputsData([...prvInputsData, "whoami"])
+         
+          //  setPrvInputsData([...prvInputsData, "whoami"])
+          //  setPrvInputsData((x)=>{console.log(x)})
         }
 
       }

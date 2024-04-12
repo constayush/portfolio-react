@@ -73,8 +73,8 @@ const containerRef = useRef(null)
 
   
     return (
-       
-       <div  ref={containerRef} className="w-full h-fit pt-[3rem] lg:pt-[6rem]  flex justify-center items-center flex-col ">
+      <div className="bggra">
+       <div  ref={containerRef} className="w-full h-fit pt-[3rem] lg:pt-[6rem]   flex justify-center items-center flex-col  bg-grid-white/[.02] ">
 
             <h1 data-scroll data-scroll-speed='.2' className="projectsH1 text-[2rem] lg:text-[4rem] my-[5rem] lg:my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
 
@@ -135,7 +135,7 @@ const containerRef = useRef(null)
 
             
         </div>
-
+</div> 
     )
 
 }

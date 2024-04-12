@@ -45,7 +45,7 @@ opacity: 0
 
   return (
    
-      <div ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center'>
+      <div ref={containerRef} className='conMain w-full h-fit flex flex-col justify-center items-center bggra'>
 
         <div className='conElems   conH1 h-[100vh] w-[95vw] md:w-[70vw]  pt-[10vmax] text-[2rem]  flex justify-center items-center md:text-[3rem] sm:ml-[2rem]'>
         <h1  className='letsMakeH1 '>Let's make<br />something great<span className='greeting'>!</span></h1>
