@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { useRef } from "react"
-import wavyBg from '../../public/wavyNavBG.jpg'
+
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 export default () => {

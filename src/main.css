@@ -522,3 +522,30 @@ outline: 0;
 .linkCL{
   transition: all .4s ease;
 }
+
+
+
+body::-webkit-scrollbar {
+  width: .81em;
+}
+ 
+body::-webkit-scrollbar-track {
+
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(181, 181, 181);
+  border-radius: 10px;
+
+}
+
+body::-webkit-scrollbar-track-piece{
+background: #68616124;
+}
+
+
+.terminal {
+  background-image: url('../public//orangeBg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
