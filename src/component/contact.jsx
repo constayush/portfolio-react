@@ -64,13 +64,13 @@ opacity: 0
             <p data-scroll data-scroll-speed='.08' className='conPara mb-[1rem]'>Thank you for taking the time to explore my portfolio. I'm passionate about what I do and always on the lookout for exciting opportunities to collaborate and create. If you have a project in mind, want to discuss potential collaborations, or just want to say hello, please don't hesitate to get in touch.</p>
             <p data-scroll data-scroll-speed='.08' className='conPara mb-[1rem]'>Feel free to reach out through any platforms bellow:</p>
 
-
-<p data-scroll data-scroll-speed='.05' className='conLinks'>+91 9084523445</p>
-            <a data-scroll data-scroll-speed='.05' href='mailto:aayush@mail.com' className='conLinks'>aayush@mail.com</a>
-            <a data-scroll data-scroll-speed='.05' target='blank' href='https://www.linkedin.com/in/constayush/' className='conLinks'>linkedin</a>
-            <a data-scroll data-scroll-speed='.05'  target='blank' href='https://github.com/constayush' className='conLinks'>github</a>
-            <a data-scroll data-scroll-speed='.05' class='aniText' target='blank' href='https://www.instagram.com/maihoonayush/' className='conLinks'>instagram</a>
-
+<div data-scroll data-scroll-speed='.04' className='flex flex-col'>
+<p  className='conLinks'>+91 9084523445</p>
+            <a href='mailto:aayush@mail.com' className='conLinks'>aayush@mail.com</a>
+            <a  target='blank' href='https://www.linkedin.com/in/constayush/' className='conLinks'>linkedin</a>
+            <a  target='blank' href='https://github.com/constayush' className='conLinks'>github</a>
+            <a  class='aniText' target='blank' href='https://www.instagram.com/maihoonayush/' className='conLinks'>instagram</a>
+</div>
           </div>
 
         </div>
