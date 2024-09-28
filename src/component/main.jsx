@@ -4,14 +4,14 @@ import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
 import orange from "../../public/orange.svg"
 import { useGSAP } from "@gsap/react";
-import { Link , } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { Power3, } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll';
 import styles from 'doodle.css/doodle.css'
-
+import { TypeAnimation } from 'react-type-animation';
 export default () => {
 
 
@@ -32,33 +32,33 @@ export default () => {
 
   };
 
-const words= [
-  {
-    text: "Click",
-  },
-  {
-    text: "on",
-  },
-  {
-    text: "the",
-  },
-  {
-    text: "orange",  
-    className: "text-orange-500 dark:text-blue-500",
-  },
-  {
-    text: "to",
-  
-  },
-  {
-    text: "switch",
-    
-  },
-  {
-    text: "realms",
-   
-  },
-];
+  const words = [
+    {
+      text: "Click",
+    },
+    {
+      text: "on",
+    },
+    {
+      text: "the",
+    },
+    {
+      text: "orange",
+      className: "text-orange-500 dark:text-blue-500",
+    },
+    {
+      text: "to",
+
+    },
+    {
+      text: "switch",
+
+    },
+    {
+      text: "realms",
+
+    },
+  ];
 
   useGSAP(() => {
     const locomotive = new LocomotiveScroll({
@@ -127,12 +127,37 @@ const words= [
 
         <div data-scroll data-scroll-speed='.08' className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
           <Link to='/terminal'><div ref={bar} className=''><img className='hidden lg:block w-[80px]' src={orange} /></div></Link>
-          <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>     
+          <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>
         </div>
 
 
-        <p data-scroll data-scroll-speed='.08' className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p>
-      
+        <div className='flex'>
+        
+          <TypeAnimation
+            data-scroll data-scroll-speed='.08'
+            className='subH1 subm  text-[1.5rem] lg:text-[2rem]'
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              'a developer hailing from India',
+              2000, // wait 1s before replacing "Mice" with "Hamsters"
+              'a web enthusiast hailing from India',
+              2000,
+              'a gamer hailing from India',
+              2000,
+
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+          /><span className='greeting inline  subm  text-[1.5rem] lg:text-[2rem]'>.</span>
+
+
+        </div>
+
+
+
+        {/* <p data-scroll data-scroll-speed='.08' className='subH1 subm  text-[1.5rem] lg:text-[2rem]'>a developer hailing from India<span className='greeting'>.</span></p> */}
+
         <div ref={networks} data-scroll data-scroll-speed='.2' className='networks mt-[2rem] p-[1rem]'>
           <div className='netbox rounded-lg w-[15rem] lg:w-[15rem]'>
             <a target='_blank' class="w-[5rem] lg:w-[4rem] icon " href="https://github.com/constayush"  ><img className='socailImg' src={github} /></a>
@@ -143,11 +168,11 @@ const words= [
         </div>
 
 
-{/* 
+        {/* 
         <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[1rem] mt-[2rem]'>My Resume (pdf 108kb)</p> */}
-        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]  fieldset'>"Click on the <span className='greeting doodle-border'><Link to='/terminal' className=''>orange</Link></span> to switch realms"</p> 
-{/* <TypewriterEffectSmooth className='subH1 subm  text-[1.5rem] lg:text-[1rem]' words={words}/> */}
-        <Link  to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px] ' src={orange} /></div></Link>
+        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]  fieldset'>"Click on the <span className='greeting doodle-border'><Link to='/terminal' className=''>orange</Link></span> to switch realms"</p>
+        {/* <TypewriterEffectSmooth className='subH1 subm  text-[1.5rem] lg:text-[1rem]' words={words}/> */}
+        <Link to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px] ' src={orange} /></div></Link>
 
       </div>
 
@@ -158,10 +183,10 @@ const words= [
 
       <div className='bggra'>
 
-   
+
 
         <div className='w-full h-screen center flex-col'>
-      
+
 
           <h1 data-scroll data-scroll-speed='.03' className="projectsH1 text-[2rem] lg:text-[3rem] my-[5rem]  lg:my-[3rem]">About me<span className="text-[#ffbe47]">.</span></h1>
           <p className=' w-[80%] md:w-[60%] projectPara  mb-[1rem]'>Hey, I'm Ayush, an 18-year-old web developer fueled by curiosity and passionate about building ui interfaces. I'm all about turning ideas into digital reality and constantly seeking new challenges to tackle.</p>
