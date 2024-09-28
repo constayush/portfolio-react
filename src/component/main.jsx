@@ -144,11 +144,13 @@ export default () => {
               2000,
               'a gamer hailing from India',
               2000,
+              'a developer hailing from India',
+              2000,
 
             ]}
             wrapper="span"
             speed={50}
-            repeat={Infinity}
+            repeat={0}
           /><span className='greeting inline  subm  text-[1.5rem] lg:text-[2rem]'>.</span>
 
 
