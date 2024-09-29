@@ -1372,10 +1372,23 @@ body {
 .ayush {
   color: #FFF3DD;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 .ayush:hover {
   letter-spacing: 1rem;
+}
+
+.hoverani  {
+  cursor: pointer;
+}
+
+.transition3{
+  transition: all .3s ease;
+}
+
+.hoverani:hover> span{
+  margin-left: 2rem;
 }
 
 .rbutton {
@@ -1669,8 +1682,14 @@ body {
           appearance:none;
 }
 
+.socailImg{
+  mix-blend-mode: multiply;
+  transition: all .3s ease;
+}
+
 .socailImg:hover{
   filter: brightness(4);
+  transform: scale(1.2);
 }
 
 .center{
@@ -1791,6 +1810,24 @@ body::-webkit-scrollbar-track-piece{
   background-image: url('../public//orangeBg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.orng{
+  transition: all .3s ease;
+}
+
+.orng:hover{
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.ornglogo{
+  transition: all .3s ease;
+  mix-blend-mode: multiply;
+}
+
+.ornglogo:hover{
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
 .hover\:text-\[1\.4rem\]:hover {
@@ -1998,4 +2035,3 @@ body::-webkit-scrollbar-track-piece{
     line-height: 1;
   }
 }
-

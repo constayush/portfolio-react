@@ -126,7 +126,11 @@ export default () => {
 
 
         <div data-scroll data-scroll-speed='.08' className='flex flex-col lg:flex-row gap-[1rem] justify-center items-center'>
-          <Link to='/terminal'><div ref={bar} className=''><img className='hidden lg:block w-[80px]' src={orange} /></div></Link>
+          <Link to='/terminal'>
+          <div ref={bar} className=''>
+          <img className='hidden lg:block w-[80px] ornglogo' src={orange} />
+          </div>
+          </Link>
           <h1 className='name nameH1 text-[2.5rem] lg:text-[3.5rem]'> Hi, I am Ayush Srivastava</h1>
         </div>
 
@@ -172,7 +176,7 @@ export default () => {
 
         {/* 
         <p className='myr   text-[.8rem] lg:text-[1rem]  mb-[1rem] mt-[2rem]'>My Resume (pdf 108kb)</p> */}
-        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]  fieldset'>"Click on the <span className='greeting doodle-border'><Link to='/terminal' className=''>orange</Link></span> to switch realms"</p>
+        <p className='subH1 subm  text-[.8rem] lg:text-[1rem] mb-[1rem] lg:mb-[0] mt-[2rem]  fieldset'>"Click on the <span className='greeting doodle-border'><Link to='/terminal' className='orng'>orange</Link></span> to switch realms"</p>
         {/* <TypewriterEffectSmooth className='subH1 subm  text-[1.5rem] lg:text-[1rem]' words={words}/> */}
         <Link to='/terminal'><div ref={bar2} className=''><img className='lg:hidden  w-[80px] ' src={orange} /></div></Link>
 

@@ -76,7 +76,7 @@ const containerRef = useRef(null)
       <div className="bggra">
        <div  ref={containerRef} className="w-full h-fit pt-[3rem] lg:pt-[6rem]   flex justify-center items-center flex-col  bg-grid-white/[.02] ">
 
-            <h1 data-scroll data-scroll-speed='.2' className="projectsH1 text-[2rem] lg:text-[4rem] my-[5rem] lg:my-[3rem]">Projects<span className="text-[#ffbe47]">.</span></h1>
+            <h1 data-scroll data-scroll-speed='.2' className="projectsH1  text-[2rem] lg:text-[4rem] my-[5rem] lg:my-[3rem] hoverani">Projects<span className="transition3  text-[#ffbe47] ">.</span></h1>
 
             <div data-scroll data-scroll-speed='.1' ref={ppara} className="projectParas  lg:leading-[1.5rem] w-[80%] lg:w-[55rem] flex flex-col justify-center items-center mt-4 overflow-hidden">
 

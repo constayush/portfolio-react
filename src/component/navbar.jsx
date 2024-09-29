@@ -16,11 +16,6 @@ let counter = 0;
 
 
 
-
-
-
-
-
 useGSAP(()=>{
 
 gsap.from(link1.current , {
