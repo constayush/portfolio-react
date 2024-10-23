@@ -798,10 +798,6 @@ video {
   pointer-events: none;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .fixed {
   position: fixed;
 }
@@ -824,10 +820,6 @@ video {
 
 .z-\[9\] {
   z-index: 9;
-}
-
-.z-\[3\] {
-  z-index: 3;
 }
 
 .m-2 {
@@ -981,6 +973,10 @@ video {
   height: 100vh;
 }
 
+.h-\[92\%\] {
+  height: 92%;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -1085,6 +1081,26 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.overscroll-y-contain {
+  overscroll-behavior-y: contain;
 }
 
 .rounded {
@@ -1278,6 +1294,18 @@ video {
   font-weight: 700;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
 .text-\[\#ffbe47\] {
   --tw-text-opacity: 1;
   color: rgb(255 190 71 / var(--tw-text-opacity));
@@ -1305,6 +1333,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-0 {
@@ -1836,6 +1868,10 @@ body::-webkit-scrollbar-track-piece{
 .ornglogo:hover{
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.TconLinks{
+  color: #ffbf47d1;
 }
 
 .hover\:text-\[1\.4rem\]:hover {
