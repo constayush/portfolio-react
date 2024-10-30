@@ -55,7 +55,7 @@ function Terminal() {
 
   function handleKeyPress(e) {
 
-    if (e.code == 'Enter' && input.current.value) {  // checking both condition if key is  = enter and input command is not empty  
+    if ((e.code === 'Enter' || e.key === 'Enter' || e.key === 'Done')  && input.current.value) {  // checking both condition if key is  = enter and input command is not empty  
 
       if (commandsArr.includes(input.current.value)) {
 
