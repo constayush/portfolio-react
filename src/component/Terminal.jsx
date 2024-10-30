@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../terminalStyles.css'
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useGSAP } from '@gsap/react'
@@ -15,23 +16,23 @@ function Terminal() {
 
 
 
-  const terminalContainer = useRef(null)
-  const terminal = useRef(null)
-  const input = useRef(null) //input div
+  const terminalContainer = useRef(null);
+  const terminal = useRef(null);
+  const input = useRef(null); //input div
 
 
 
-  let [prvInputsData, setPrvInputsData] = useState([]) // array to store all input data.
-  let [inputData, setInputData] = useState() // to store current input data.
+  let [prvInputsData, setPrvInputsData] = useState([]); // array to store all input data.
+  let [inputData, setInputData] = useState(); // to store current input data.
 
 
-  const commandsArr = ['whoami', 'projects', 'contact', 'help'] // array of commands
+  const commandsArr = ['whoami', 'projects', 'contact', 'help']; // array of commands
 
 
 
   //bgImgs 
-  let bgCounter = 0
-  const bgImgArr = [orangeBg, whiteBg, blackBg, orangeDrak, multiBg]
+  let bgCounter = 1;
+  const bgImgArr = [orangeBg, whiteBg, blackBg, orangeDrak, multiBg];
 
 
   /* .. ...........................................ANIMATIONS..................................................*/
@@ -44,17 +45,12 @@ function Terminal() {
       duration: .6,
       opacity: 0
     })
-  })
+  });
 
   /* .. ...........................................ANIMATIONS End..................................................*/
 
 
-
   function handleInputChange(e) { setInputData(e.target.value); } //setting value of input
-
-
-
-
 
 
   function handleKeyPress(e) {
@@ -94,14 +90,12 @@ function Terminal() {
 
         }
         
-
       }
 
       else {
         setPrvInputsData([...prvInputsData, inputData]); // updating array of input data
         input.current.value = null // setting input value to null
       }
-
 
     }
 
@@ -111,7 +105,6 @@ function Terminal() {
       input.current.value = null // setting input value to null
 
     }
-
 
   }
 
@@ -125,8 +118,6 @@ function Terminal() {
     else { bgCounter++ }
 
   }
-
-
 
 
   return (
@@ -147,7 +138,7 @@ function Terminal() {
 
         </nav>
 
-        <div className='w-full p-[1rem] h-[92%] overflow-auto text-white tfont '>
+        <div className='w-full p-[1rem] h-[90%] overflow-auto text-white tfont '>
 
 
           <p> Welcome to my termianl portfolio!</p>
@@ -165,22 +156,14 @@ function Terminal() {
             <p className='pb-[1rem]'>------------------------------------</p></pre>
 
 
-
-
-
           {prvInputsData.map((data) => <div className='oldCommand  flex'><p>user@ayush:~#</p><p>{data}</p></div>)}
-
-
 
 
           <div className='newCommand flex'>
 
-
             <p>user@ayush:~#</p>
 
             <input ref={input} type='text' onKeyDown={handleKeyPress} onChange={handleInputChange} className='tinput w-full bg-transparent' />
-
-
 
           </div>
 

@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
+    "react-scroll-motion": "^0.3.3",
     "react-type-animation": "^3.2.0",
     "split-type": "^0.3.4",
     "swiper": "^11.0.7",
