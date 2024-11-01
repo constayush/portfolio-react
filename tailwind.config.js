@@ -14,6 +14,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        aurora: "aurora 60s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
@@ -22,6 +23,14 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
       },
       keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",
@@ -101,6 +110,18 @@ function addVariablesForColors({ addBase, theme }) {
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
+  addBase({
+    ":root": newVars,
+  });
+}
+
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
   addBase({
     ":root": newVars,
   });
