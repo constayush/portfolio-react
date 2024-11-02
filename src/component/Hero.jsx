@@ -139,10 +139,19 @@ function Hero() {
             <div ref={projectCon} className='w-full h-[100vh]  flex justify-center'>
 
 
-                <div className='w-[70rem] h-[80rem] flex flex-col gap-5  bg-red-500'>
+                <div className='w-[70rem] h-fit flex flex-col gap-5  bg-red-500'>
 
 
                     <h1 className=' text-[3.25rem] font-semibold'>Projects.</h1>
+
+                    <div className='flex flex-wrap justify-center items-center'>
+
+this site is under construction
+<div className='card'></div>
+<div className='card'></div>
+<div className='card'></div>
+
+                    </div>
 
                 </div>
 
