@@ -19,6 +19,7 @@ import resume from '../../public/resumeIcon.svg'
 import { AuroraBackground } from "./ui/aurora-background";
 import { motion } from "framer-motion";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import tempProjectsImg from '../../public/projects.jpg'
 function Hero() {
 
     const org = useRef();
@@ -59,106 +60,146 @@ function Hero() {
 
 
         let orangeAnimation = gsap.from(org.current, {
-
             ease: Power3,
-
             rotate: 360,
             duration: 80,
-
-
             repeat: -1
-
         })
 
     })
 
     return (
+        <div className="hero w-full h-auto bg-grid-[#fc9930]/[.04]">
 
-        <div className='hero w-full h-fit bg-grid-[#fc9930]/[.04]'>
 
-            <nav ref={nav} className='fixed top-0  w-full h-[12rem] flex justify-center items-center z-[99]'  >
-                <div className='w-full h-full flex justify-between p-[4rem] items-center '>
-                    <div className='flex justify-center items-center'>
-                        <h1 className="logoNav hover:text-[#fc9930] text-2xl lg:text-4xl"><a href="/">A<span className='accent'>0.</span></a></h1>
-                    </div>
-                    <ul className='flex gap-4 font-semibold text-[1.15rem]'>
-                        <li className=' hover:text-[#fc9930] transition-all decoration-[#a09d9d] '><Link to={"/terminal"} >Terminal</Link></li>
-                        <li className='hover:text-[#fc9930] transition-all   decoration-[#a09d9d]' ><a href='' >Resume  </a></li>
+            <nav ref={nav} className="fixed top-0 w-full h-48 flex justify-center items-center z-99">
+
+                <div className="flex justify-between items-center w-full h-full px-8 md:px-16 ">
+
+                    <h1 className="logoNav text-2xl lg:text-4xl hover:text-[#fc9930]">
+                        <a href="/">A<span className="accent">0.</span></a>
+                    </h1>
+
+                    <ul className="flex gap-4 font-semibold text-lg">
+
+                        <li className="hover:text-[#fc9930] transition-all">
+                            <Link to="/terminal">Terminal</Link>
+                        </li>
+
+                        <li className="hover:text-[#fc9930] transition-all">
+                            <a href="#">Resume</a>
+                        </li>
+
                     </ul>
+
                 </div>
+
             </nav>
-            {/* <AuroraBackground>
-      <motion.div
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: .9,
-          ease: "easeInOut",
-        }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
-      > */}
-            <main className='w-full h-[100vh] pt-[12rem] flex justify-center '>
 
-                <div className='w-[80%] md:w-[60%] h-fit flex flex-col gap-7 justify-center items-center'>
+            <main className="flex justify-center w-full min-h-screen pt-48">
 
-                    <div className='flex'>
+                <div className="flex flex-col gap-7 items-center w-11/12 md:w-3/5">
+
+                    <div className="flex text-center">
 
 
-                        <h1 className='text-[1.35rem] md:text-[3rem] inline font-medium text-[#fafafa]'>Creating User Experiences That Code with the Zest of Fresh Oranges!<Link to={"/terminal"} ><img ref={org} className='ml-[1.5rem] inline w-[3rem] md:w-[4rem] ' src={orange} /></Link></h1>
+                        <h1 className="text-[1.35rem] md:text-[3rem] font-medium text-[#fafafa]">
+                            Creating User Experiences That Code with the Zest of Fresh Oranges!
+                            <Link to="/terminal">
+                                <img ref={org} className="ml-4 inline w-12 md:w-16" src={orange} alt="orange logo" />
+                            </Link>
+                        </h1>
 
 
                     </div>
 
-                    <h2 className='text-[1.2rem] md:text-[1.75rem] text-[#d3c6ba] font-medium'>— Hi, I’m <span className='font-semibold text-[#fff7ea]'>Ayush</span>, a web developer from India.</h2>
+                    <h2 className="text-lg md:text-2xl text-[#d3c6ba] font-medium">
 
+                        — Hi, I’m <span className="font-semibold text-[#fff7ea]">Ayush</span>, a web developer from India.
 
-                    <div className='flex'>
-                        {/* <img className='resumeLogo w-[2.6rem] md:w-[3.25rem] cursor-pointer' src={resume} /> */}
+                    </h2>
 
-                        <div className='networks  p-[1rem]'>
-                            <div className='netbox border-[#ffffff]  rounded-lg w-fit lg:w-[15rem]'>
-                                <a target='_blank' class="w-[3rem] lg:w-[3.5rem] icon " href="https://github.com/constayush"  ><img className='heroSocialLogos' src={github} /></a>
-                                <a target='_blank' class="w-[3rem] lg:w-[3.5rem] icon " href="https://www.linkedin.com/in/constayush/"  ><img className='heroSocialLogos' src={linkedin} /></a>
-                                <a target='_blank' class="w-[3rem] lg:w-[3.5rem] icon " href="https://www.instagram.com/maihoonayush/" ><img className='heroSocialLogos' src={insta} /></a>
-                                <a target='_blank' class="w-[3rem] lg:w-[3.5rem] icon " href="mailto:aayush@mail.com" ><img className='heroSocialLogos' src={mail} /></a>
+                    <div className="flex space-x-4">
+
+                        <div className="networks ">
+
+                            <div className="netbox border-[#ffffff] rounded-lg flex gap-4 p-3">
+
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/constayush">
+                                    <img className="w-10  heroSocialLogos" src={github} alt="GitHub" />
+                                </a>
+
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/constayush/">
+                                    <img className="w-10  heroSocialLogos" src={linkedin} alt="LinkedIn" />
+                                </a>
+
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/maihoonayush/">
+                                    <img className="w-10  heroSocialLogos" src={insta} alt="Instagram" />
+                                </a>
+
+                                <a target="_blank" rel="noopener noreferrer" href="mailto:aayush@mail.com">
+                                    <img className="w-10  heroSocialLogos" src={mail} alt="Mail" />
+                                </a>
+
                             </div>
+
                         </div>
+
                     </div>
 
                 </div>
-
-
-
-
 
             </main>
-            {/* </motion.div>
-            </AuroraBackground> */}
 
-            <div ref={projectCon} className='w-full h-[100vh]  flex justify-center'>
+            <div ref={projectCon} className="flex justify-center w-full min-h-screen py-10">
 
+                <div className="w-full max-w-5xl  p-8 flex flex-col gap-16">
 
-                <div className='w-[70rem] h-fit flex flex-col gap-5  bg-red-500'>
+                    <h1 className="text-3xl md:text-5xl font-semibold">Projects.</h1>
 
+                    <div className="break-words grid grid-cols-1 md:grid-cols-2 gap-6   ">
 
-                    <h1 className=' text-[3.25rem] font-semibold'>Projects.</h1>
+                        <a className="card  rounded-lg max-w-[30rem]  ">
 
-                    <div className='flex flex-wrap justify-center items-center'>
+                            <h1 className='projects-h1'>Name...</h1>
+                            <img  src={tempProjectsImg}/>
+                            <p className=''>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
 
-this site is under construction
-<div className='card'></div>
-<div className='card'></div>
-<div className='card'></div>
+                        </a>
+
+                        <a className="card  rounded-lg max-w-[30rem]">
+
+                            <h1 className='projects-h1'>Name...</h1>
+                            <img  src={tempProjectsImg}/>
+                            <p>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
+
+                        </a>
+
+                        <a className="card  rounded-lg max-w-[30rem]">
+
+                            <h1 className='projects-h1'>Name...</h1>
+                            <img  src={tempProjectsImg}/>
+                            <p>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
+
+                        </a>
+
+                        <a className="card  rounded-lg max-w-[30rem]">
+
+                            <h1 className='projects-h1'>Name...</h1>
+                            <img  src={tempProjectsImg}/>
+                            <p>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
+
+                        </a>
 
                     </div>
 
                 </div>
-
 
             </div>
 
         </div>
+
+
     )
 }
 
