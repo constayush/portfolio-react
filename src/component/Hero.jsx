@@ -20,7 +20,34 @@ import { AuroraBackground } from "./ui/aurora-background";
 import { motion } from "framer-motion";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import tempProjectsImg from '../../public/projects.jpg'
+import ProjectCard from './ui/projectCard';
 function Hero() {
+
+
+// rendering project card with this obj
+    let projects = [
+
+         {
+            projectName: "Project",
+            projectDescription: " this is first project, it is in development",
+            projectImg: tempProjectsImg
+        },
+        {
+            projectName: "Project",
+            projectDescription: " this is second project, it is in development",
+            projectImg: tempProjectsImg
+        },
+        {
+            projectName: "Project",
+            projectDescription: " this is third project, it is in development",
+            projectImg: tempProjectsImg
+        },
+        {
+            projectName: "Project",
+            projectDescription: " this is fourth project, it is in development",
+            projectImg: tempProjectsImg
+        }
+    ]
 
     const org = useRef();
     const projectCon = useRef();
@@ -58,7 +85,7 @@ function Hero() {
             },
         });
 
-
+// org spining animation
         let orangeAnimation = gsap.from(org.current, {
             ease: Power3,
             rotate: 360,
@@ -157,40 +184,16 @@ function Hero() {
 
                     <h1 className="text-3xl md:text-5xl font-semibold">Projects.</h1>
 
-                    <div className="break-words grid grid-cols-1 md:grid-cols-2 gap-6   ">
+                    <div className="break-words grid grid-cols-1 md:grid-cols-2 gap-6  place-items-center ">
 
-                        <a className="card  rounded-lg max-w-[30rem]  ">
 
-                            <h1 className='projects-h1'>Name...</h1>
-                            <img  src={tempProjectsImg}/>
-                            <p className=''>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
+                 {
+                    projects.map((i,a)=>{
 
-                        </a>
-
-                        <a className="card  rounded-lg max-w-[30rem]">
-
-                            <h1 className='projects-h1'>Name...</h1>
-                            <img  src={tempProjectsImg}/>
-                            <p>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
-
-                        </a>
-
-                        <a className="card  rounded-lg max-w-[30rem]">
-
-                            <h1 className='projects-h1'>Name...</h1>
-                            <img  src={tempProjectsImg}/>
-                            <p>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
-
-                        </a>
-
-                        <a className="card  rounded-lg max-w-[30rem]">
-
-                            <h1 className='projects-h1'>Name...</h1>
-                            <img  src={tempProjectsImg}/>
-                            <p>jajfdkljfkadjsfklajfdklajdfkljdasklfjakjfaksdljfklsadjfkldsajfkldajsflkadjflkjadsklfj</p>
-
-                        </a>
-
+                     return <ProjectCard projectDescription={projects[a].projectDescription} projectImg={projects[a].projectImg} projectName={projects[a].projectName}/>
+                    })
+                 }      
+                 
                     </div>
 
                 </div>

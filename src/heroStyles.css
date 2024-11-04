@@ -139,9 +139,9 @@ font-weight: 500;
  .card{
   display: flex;
   justify-content: center;
-background-color: #070606;
+background-color: #040404;
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
-  box-shadow: rgba(255, 255, 255, 0.01) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.01) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.09) 0px 0px 0px 1px inset;
  }
