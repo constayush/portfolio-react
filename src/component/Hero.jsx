@@ -6,6 +6,7 @@ import { ScrollContainer, ScrollPage, Animator, batch, Fade, Move, Sticky } from
 import { TypeAnimation } from 'react-type-animation';
 import { Power3 } from 'gsap';
 import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import styles from '../heroStyles.css'
 import pfp from '../../public/pfp.jpg'
 import { Link } from 'react-router-dom'
@@ -21,13 +22,15 @@ import { motion } from "framer-motion";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import tempProjectsImg from '../../public/projects.jpg'
 import ProjectCard from './ui/projectCard';
+
+gsap.registerPlugin(ScrollTrigger)
 function Hero() {
 
 
-// rendering project card with this obj
+    // rendering project card with this obj
     let projects = [
 
-         {
+        {
             projectName: "Project",
             projectDescription: " this is first project, it is in development",
             projectImg: tempProjectsImg
@@ -51,7 +54,7 @@ function Hero() {
 
     const org = useRef();
     const projectCon = useRef();
-
+    const mainCon = useRef();
     //nav bar glass-fading  effect
     const nav = useRef();
     window.onscroll = () => {
@@ -65,6 +68,11 @@ function Hero() {
 
     //gsap animation
     useGSAP(() => {
+
+
+
+
+
 
 
         //smooth scrolling locomotive
@@ -85,7 +93,7 @@ function Hero() {
             },
         });
 
-// org spining animation
+        // org spining animation
         let orangeAnimation = gsap.from(org.current, {
             ease: Power3,
             rotate: 360,
@@ -93,13 +101,42 @@ function Hero() {
             repeat: -1
         })
 
+
+        gsap.from(projectCon.current, {
+
+            y: 400,
+            opacity: 0,
+            scrollTrigger: {
+
+                trigger: mainCon.current,
+                start: "70% 70%",
+                scrub: true,
+                duration: 0.1
+
+            }
+
+        })
+
+        gsap.from(mainCon.current, {
+
+       
+
+        })
+
+
+
+
+
+
+
+
     })
 
     return (
         <div className="hero w-full h-auto bg-grid-[#fc9930]/[.04]">
 
 
-            <nav ref={nav} className="fixed top-0 w-full h-48 flex justify-center items-center z-99">
+            <nav ref={nav} className="fixed top-0 w-full h-48 flex justify-center items-center z-[99]">
 
                 <div className="flex justify-between items-center w-full h-full px-8 md:px-16 ">
 
@@ -123,14 +160,14 @@ function Hero() {
 
             </nav>
 
-            <main className="flex justify-center w-full min-h-screen pt-48">
+            <main ref={mainCon} className="flex justify-center w-full h-auto pt-48 mb-24">
 
-                <div className="flex flex-col gap-7 items-center w-11/12 md:w-3/5">
+                <div className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center">
 
                     <div className="flex text-center">
 
 
-                        <h1 className="text-[1.35rem] md:text-[3rem] font-medium text-[#fafafa]">
+                        <h1 className="text-[1.35rem] md:text-[2.2rem] lg:text-[3rem] font-medium text-[#fafafa]">
                             Creating User Experiences That Code with the Zest of Fresh Oranges!
                             <Link to="/terminal">
                                 <img ref={org} className="ml-4 inline w-12 md:w-16" src={orange} alt="orange logo" />
@@ -140,7 +177,7 @@ function Hero() {
 
                     </div>
 
-                    <h2 className="text-lg md:text-2xl text-[#d3c6ba] font-medium">
+                    <h2 className="text-lg md:text-2xl text-[#d3c6ba] font-medium ">
 
                         — Hi, I’m <span className="font-semibold text-[#fff7ea]">Ayush</span>, a web developer from India.
 
@@ -178,7 +215,7 @@ function Hero() {
 
             </main>
 
-            <div ref={projectCon} className="flex justify-center w-full min-h-screen py-10">
+            <div ref={projectCon} className="flex justify-center w-full h-auto py-10">
 
                 <div className="w-full max-w-5xl  p-8 flex flex-col gap-16">
 
@@ -187,13 +224,13 @@ function Hero() {
                     <div className="break-words grid grid-cols-1 md:grid-cols-2 gap-6  place-items-center ">
 
 
-                 {
-                    projects.map((i,a)=>{
+                        {
+                            projects.map((i, a) => {
 
-                     return <ProjectCard projectDescription={projects[a].projectDescription} projectImg={projects[a].projectImg} projectName={projects[a].projectName}/>
-                    })
-                 }      
-                 
+                                return <ProjectCard projectDescription={projects[a].projectDescription} projectImg={projects[a].projectImg} projectName={projects[a].projectName} />
+                            })
+                        }
+
                     </div>
 
                 </div>
