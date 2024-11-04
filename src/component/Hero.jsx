@@ -54,7 +54,9 @@ function Hero() {
 
     const org = useRef();
     const projectCon = useRef();
+    const mainHeading = useRef();
     const mainCon = useRef();
+    const subHeading = useRef();
     //nav bar glass-fading  effect
     const nav = useRef();
     window.onscroll = () => {
@@ -117,12 +119,21 @@ function Hero() {
 
         })
 
-        gsap.from(mainCon.current, {
+        gsap.from(mainHeading.current, {
 
-       
-
+            y: 100,
+            opacity: 0,
+            duration: .6
         })
 
+        gsap.from(subHeading, {
+
+            y: 100,
+            opacity: 0,
+            duration: .8
+
+
+        })
 
 
 
@@ -167,8 +178,8 @@ function Hero() {
                     <div className="flex text-center">
 
 
-                        <h1 className="text-[1.35rem] md:text-[2.2rem] lg:text-[3rem] font-medium text-[#fafafa]">
-                            Creating User Experiences That Code with the Zest of Fresh Oranges!
+                        <h1 ref={mainHeading} className="text-[1.35rem] md:text-[2.2rem] lg:text-[2.8rem] font-semibold text-[#fafafa]">
+                            Creating User Experiences That Coded with the Zest of Fresh Oranges!
                             <Link to="/terminal">
                                 <img ref={org} className="ml-4 inline w-12 md:w-16" src={orange} alt="orange logo" />
                             </Link>
@@ -177,9 +188,9 @@ function Hero() {
 
                     </div>
 
-                    <h2 className="text-lg md:text-2xl text-[#d3c6ba] font-medium ">
+                    <h2 ref={subHeading} className="text-lg md:text-2xl text-[#d3c6ba] font-medium mb-5">
 
-                        — Hi, I’m <span className="font-semibold text-[#fff7ea]">Ayush</span>, a web developer from India.
+                        — Hi, I’m <span className="font-semibold text-[#fff7ea]">Ayush</span>, a web developer from <span className="font-semibold text-[#fff7ea]">India.</span>
 
                     </h2>
 
@@ -219,7 +230,7 @@ function Hero() {
 
                 <div className="w-full max-w-5xl  p-8 flex flex-col gap-16">
 
-                    <h1 className="text-3xl md:text-5xl font-semibold">Projects.</h1>
+                    <h1 className="text-3xl md:text-[2.7rem] font-semibold">Projects.</h1>
 
                     <div className="break-words grid grid-cols-1 md:grid-cols-2 gap-6  place-items-center ">
 
@@ -236,6 +247,30 @@ function Hero() {
                 </div>
 
             </div>
+
+
+
+
+
+<div className='current-technologies'>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
 

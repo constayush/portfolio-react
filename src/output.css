@@ -850,6 +850,10 @@ video {
   z-index: 0;
 }
 
+.z-\[99\] {
+  z-index: 99;
+}
+
 .z-\[9\] {
   z-index: 9;
 }
@@ -866,6 +870,10 @@ video {
 .my-\[5rem\] {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mb-\[1rem\] {
@@ -894,6 +902,18 @@ video {
 
 .mt-\[3rem\] {
   margin-top: 3rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -987,10 +1007,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 .w-10 {
@@ -1858,6 +1874,10 @@ video {
     line-height: 1;
   }
 
+  .md\:text-\[2\.2rem\] {
+    font-size: 2.2rem;
+  }
+
   .md\:text-\[3rem\] {
     font-size: 3rem;
   }
@@ -1867,16 +1887,8 @@ video {
     line-height: 1.75rem;
   }
 
-  .md\:text-\[2rem\] {
-    font-size: 2rem;
-  }
-
-  .md\:text-\[2\.6rem\] {
-    font-size: 2.6rem;
-  }
-
-  .md\:text-\[2\.2rem\] {
-    font-size: 2.2rem;
+  .md\:text-\[2\.7rem\] {
+    font-size: 2.7rem;
   }
 }
 
@@ -1958,6 +1970,10 @@ video {
 
   .lg\:text-\[3rem\] {
     font-size: 3rem;
+  }
+
+  .lg\:text-\[2\.8rem\] {
+    font-size: 2.8rem;
   }
 }
 
