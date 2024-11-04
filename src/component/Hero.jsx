@@ -18,6 +18,7 @@ import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
 import resume from '../../public/resumeIcon.svg'
 import { AuroraBackground } from "./ui/aurora-background";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { motion } from "framer-motion";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import tempProjectsImg from '../../public/projects.jpg'
@@ -51,6 +52,9 @@ function Hero() {
             projectImg: tempProjectsImg
         }
     ]
+
+
+    const mainHeadingWords = "Creating User Experiences That Coded with the Zest of Fresh Oranges!";
 
     const org = useRef();
     const projectCon = useRef();
@@ -96,8 +100,16 @@ function Hero() {
         });
 
         // org spining animation
-        let orangeAnimation = gsap.from(org.current, {
+
+gsap.from(org.current, {
+
+    x: 100,
+    scale:5
+})
+
+        gsap.from(org.current, {
             ease: Power3,
+          
             rotate: 360,
             duration: 80,
             repeat: -1
@@ -119,21 +131,14 @@ function Hero() {
 
         })
 
-        gsap.from(mainHeading.current, {
+        gsap.from(mainCon.current, {
 
             y: 100,
             opacity: 0,
-            duration: .6
+            duration: .6,
+            stagger: .2
         })
 
-        gsap.from(subHeading, {
-
-            y: 100,
-            opacity: 0,
-            duration: .8
-
-
-        })
 
 
 
@@ -171,19 +176,20 @@ function Hero() {
 
             </nav>
 
-            <main ref={mainCon} className="flex justify-center w-full h-auto pt-48 mb-24">
+            <main className="flex justify-center w-full h-auto pt-48 mb-24">
 
-                <div className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center">
+                <div ref={mainCon} className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center">
 
                     <div className="flex text-center">
 
 
-                        <h1 ref={mainHeading} className="text-[1.35rem] md:text-[2.2rem] lg:text-[2.8rem] font-semibold text-[#fafafa]">
-                            Creating User Experiences That Coded with the Zest of Fresh Oranges!
+                        <div ref={mainHeading} className="text-[1.35rem] md:text-[2.2rem] lg:text-[2.8rem] font-semibold text-[#fafafa]">
+                            <h1 className='inline'>
+                                <TextGenerateEffect className={"inline"} words={mainHeadingWords} /></h1>
                             <Link to="/terminal">
-                                <img ref={org} className="ml-4 inline w-12 md:w-16" src={orange} alt="orange logo" />
+                                <img ref={org} className="ml-4 inline w-12 md:w-[4.25rem]" src={orange} alt="orange logo" />
                             </Link>
-                        </h1>
+                        </div>
 
 
                     </div>
@@ -196,7 +202,7 @@ function Hero() {
 
                     <div className="flex space-x-4">
 
-                        <div className="networks ">
+                        <div className="networks flex lg:flex-row-reverse flex-wrap flex-col gap-4 md:gap-0 ">
 
                             <div className="netbox border-[#ffffff] rounded-lg flex gap-4 p-3">
 
@@ -217,6 +223,8 @@ function Hero() {
                                 </a>
 
                             </div>
+
+                            {/* <a  download="" class="p-4 flex items-center bg-[#111111] w-auto text-center justify-center hover:bg-white text-white hover:text-[#111111] md:px-3 md:py-1 rounded transition duration-300 md:mr-4 border border-white"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="mr-2" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>Resume</a> */}
 
                         </div>
 
@@ -247,28 +255,6 @@ function Hero() {
                 </div>
 
             </div>
-
-
-
-
-
-<div className='current-technologies'>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
 
 
 
