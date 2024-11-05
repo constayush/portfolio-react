@@ -112,7 +112,7 @@ function handleScrollArrow (){
                 smoothWheel: true,
                 smoothTouch: true,
                 wheelMultiplier: 1.2,
-                touchMultiplier: 1.65,
+                // touchMultiplier: 1.65,
                 normalizeWheel: true,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
             },
@@ -197,7 +197,7 @@ function handleScrollArrow (){
 
             <main className="flex justify-center w-full h-auto pt-48 mb-24 flex-col items-center">
 
-                <div ref={mainCon} className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center md:mb-20">
+                <div ref={mainCon} className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center md:mb-8">
 
                     <div className="flex text-center">
 
@@ -258,7 +258,7 @@ function handleScrollArrow (){
                 </div>
 
                
-                <svg onClick={handleScrollArrow} className='hover:cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-down size-10 hover:cursor-pointer"><path d="M8 18L12 22L16 18"></path></svg>
+                <svg onClick={handleScrollArrow} className='hover:cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".17" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-down size-10 hover:cursor-pointer"><path d="M8 18L12 22L16 18"></path></svg>
               
             </main>
 
