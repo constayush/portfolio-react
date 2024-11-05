@@ -28,6 +28,25 @@ gsap.registerPlugin(ScrollTrigger)
 function Hero() {
 
 
+
+
+
+
+
+function handleScrollArrow (){
+
+    window.scrollTo({
+        top: 650,           // Vertical position
+        left: 0,            // Horizontal position (optional)
+        behavior: "smooth"  // Smooth scroll
+      });
+}
+
+
+
+
+
+
     // rendering project card with this obj
     let projects = [
 
@@ -93,7 +112,7 @@ function Hero() {
                 smoothWheel: true,
                 smoothTouch: true,
                 wheelMultiplier: 1.2,
-                touchMultiplier: 1.5,
+                touchMultiplier: 1.65,
                 normalizeWheel: true,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
             },
@@ -101,15 +120,15 @@ function Hero() {
 
         // org spining animation
 
-gsap.from(org.current, {
+        gsap.from(org.current, {
 
-    x: 100,
-    scale:5
-})
+            x: 100,
+            scale: 5
+        })
 
         gsap.from(org.current, {
             ease: Power3,
-          
+
             rotate: 360,
             duration: 80,
             repeat: -1
@@ -176,9 +195,9 @@ gsap.from(org.current, {
 
             </nav>
 
-            <main className="flex justify-center w-full h-auto pt-48 mb-24">
+            <main className="flex justify-center w-full h-auto pt-48 mb-24 flex-col items-center">
 
-                <div ref={mainCon} className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center">
+                <div ref={mainCon} className="flex flex-col gap-7 items-center w-11/12 md:w-3/5 text-center md:mb-20">
 
                     <div className="flex text-center">
 
@@ -224,13 +243,13 @@ gsap.from(org.current, {
 
                             </div>
 
-                            <a  download="" class="p-4 flex items-center bg-[#111111] w-auto text-center justify-center hover:bg-white text-white hover:text-[#111111] md:px-3 md:py-1 rounded transition duration-300 border border-white">
-                            
-                            
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="mr-2" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>
-                            
-                
-                            Resume</a>
+                            <a download="" class="p-4 flex items-center bg-[#111111] w-auto text-center justify-center hover:bg-white text-white hover:text-[#111111] md:px-3 md:py-1 rounded transition duration-300 border border-white">
+
+
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="mr-2" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>
+
+
+                                Resume</a>
 
                         </div>
 
@@ -238,13 +257,16 @@ gsap.from(org.current, {
 
                 </div>
 
+               
+                <svg onClick={handleScrollArrow} className='hover:cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-down size-10 hover:cursor-pointer"><path d="M8 18L12 22L16 18"></path></svg>
+              
             </main>
 
-            <div ref={projectCon} className="flex justify-center w-full h-auto py-10">
+            <div  ref={projectCon} className="flex justify-center w-full h-auto py-10">
 
-                <div className="w-full max-w-5xl  p-8 flex flex-col gap-16">
+                <div className="w-full max-w-5xl projectss p-8 flex flex-col gap-16">
 
-                    <h1 className="text-3xl md:text-[2.7rem] font-semibold ">Projects<span className="font-semibold text-[#f6b64f]">.</span></h1>
+                    <h1  className="text-3xl md:text-[2.7rem] font-semibold ">Projects<span className="font-semibold text-[#f6b64f]">.</span></h1>
 
                     <div className="break-words grid grid-cols-1 md:grid-cols-2 gap-6  place-items-center ">
 
