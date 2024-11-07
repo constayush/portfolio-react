@@ -2,6 +2,7 @@
 import { cn } from "../../../utils/cn";
 import React from "react";
 
+
 export const AuroraBackground = ({
   className,
   children,
@@ -34,7 +35,7 @@ export const AuroraBackground = ({
           after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
           pointer-events-none
           absolute -inset-[10px] opacity-50 will-change-transform`, showRadialGradient &&
-              `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`)}></div>
+              `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_10%)]`)}></div>
         </div>
         {children}
       </div>
