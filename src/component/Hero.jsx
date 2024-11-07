@@ -8,7 +8,7 @@ import { Power3 } from 'gsap';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import styles from '../heroStyles.css'
-import pfp from '../../public/pfp.jpg'
+
 import { Link } from 'react-router-dom'
 import Terminal from './Terminal'
 import orange from "../../public/orange.svg"
@@ -16,7 +16,7 @@ import github from '../../public/github.svg'
 import linkedin from '../../public/linked-in.svg'
 import insta from '../../public/instagram.svg'
 import mail from '../../public/mail.svg'
-import resume from '../../public/resumeIcon.svg'
+
 import { AuroraBackground } from "./ui/aurora-background";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { motion } from "framer-motion";
@@ -295,7 +295,7 @@ function Hero() {
 
                         <h1 className="text-3xl md:text-[2.7rem] font-semibold ">About me<span className="font-semibold text-[#f6b64f]">.</span></h1>
 
-                        <p className='text-[1.15rem] text-[#cecece] font-medium '>Hi! I’m <span className='font-semibold text-[#ffffff]'>Ayush Srivastava</span>, an <span className='font-semibold text-[#ffffff]'>18-year-old</span> web developer from <span className='font-semibold text-[#ffffff]'>India</span> crafting seamless user experiences. I’m currently working with <span className='font-semibold text-[#ffffff]'>TypeScript, React, and Next.js</span>. When I’m not coding, you’ll usually find me playing <span className='font-semibold text-[#ffffff]'>chess</span> or relaxing with a game of <span className='font-semibold text-[#ffffff]'>Valorant or CS2</span>. </p>
+                        <p className='text-[1.15rem] text-[#cecece] font-medium '>Hi! I’m <span className='font-semibold text-[#ffc973]'>Ayush Srivastava</span>, an <span className='font-semibold text-[#ffc567]'>18-year-old</span> web developer from <span className='font-semibold text-[#ffc567]'>India</span> crafting seamless user experiences. I’m currently working with <span className='font-semibold text-[#ffc567]'>TypeScript, React, and Next.js</span>. When I’m not coding, you’ll usually find me playing <span className='font-semibold text-[#ffffff]'>chess</span> or relaxing with a game of <span className='font-semibold text-[#ffffff]'>Valorant or CS2</span>. </p>
 
                         <h1 className='font-semibold text-xl text-[#ffffff]'>My Tech Stack</h1>
 
@@ -332,10 +332,10 @@ function Hero() {
                                     Mail
                                 </a>
                                 <a download="" class="p-2 flex items-center bg-[#111111] w-auto text-center justify-center hover:bg-white text-white hover:text-[#111111]  rounded transition duration-300">
-                                    -
+                                    
                                     <svg stroke="currentColor" fill="currentColor" viewBox="0 0 384 512" class="mr-2" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>
 
-                                    Resume</a>
+                                    <h5 className=' hover:text-[#000]'>Resume</h5></a>
                             </div>
 
 
